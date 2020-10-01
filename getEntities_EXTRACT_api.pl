@@ -86,5 +86,8 @@ while (my $entry = <TSV>) {
         if ($type eq "-2"){ #NCBI Taxonomy term
             print $tagged_text."\t"."NCBI:".$id;
         }
+        if ($type eq "-27"){ #ENVO term
+            print $tagged_text."\t"."ENVO:".$id;
+        }
     }
 }
