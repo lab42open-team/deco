@@ -24,7 +24,7 @@
 # Note:     comments on the EXTRACT API specifics are given in-line
 #
 # More:     https://doi.org/10.1101/078469
-# FAQ:      https://extract.hcmr.gr , FAQ, puprle section
+# FAQ:      https://extract.hcmr.gr , FAQ, purple section
 
 
 use strict;
