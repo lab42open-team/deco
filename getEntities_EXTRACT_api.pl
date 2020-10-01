@@ -52,7 +52,7 @@ my $url = $server."/".$method;
 #-25: BRENDA Tissue Ontology terms
 #-26: Disease Ontology terms
 #-27: Environment Ontology terms
-my $entity_types="-27 -2"; #(concatenate with " " to use multiple)
+my $entity_types="-27 -2 -25"; #(concatenate with " " to use multiple)
 my $format = "tsv";
 my $document = ""; # to be read from the input file
 
@@ -87,6 +87,9 @@ while (my $entry = <TSV>) {
             print $tagged_text."\t"."NCBI:".$id;
         }
         if ($type eq "-27"){ #ENVO term
+            print $tagged_text."\t".$id;
+        }
+        if ($type eq "-25"){ #Brenda term
             print $tagged_text."\t".$id;
         }
     }
