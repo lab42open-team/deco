@@ -87,7 +87,7 @@ while (my $entry = <TSV>) {
             print $tagged_text."\t"."NCBI:".$id;
         }
         if ($type eq "-27"){ #ENVO term
-            print $tagged_text."\t"."ENVO:".$id;
+            print $tagged_text."\t".$id;
         }
     }
 }
