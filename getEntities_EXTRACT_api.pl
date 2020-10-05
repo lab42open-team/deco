@@ -65,7 +65,7 @@ while (my $entry = <TSV>) {
 
     #print new header line
     unless ( $header_skipped ) {
-        print "tagged text"."\t"."matched term"."\t"."entry"."\n";
+        print "tagged text"."\t"."entity type"."\t"."term id"."\n";
         $header_skipped = 1;
         next;
     }
@@ -84,13 +84,13 @@ while (my $entry = <TSV>) {
         my ($tagged_text, $type, $id) = split /\t/, $tag;
 
         if ($type eq "-2"){ #NCBI Taxonomy term
-            print $tagged_text."\t"."NCBI:".$id;
+            print $tagged_text."\t".$type."\t"."NCBI:".$id."\n";
         }
         if ($type eq "-27"){ #ENVO term
-            print $tagged_text."\t".$id;
+            print $tagged_text."\t".$type."\t".$id."\n";
         }
         if ($type eq "-25"){ #Brenda term
-            print $tagged_text."\t".$id;
+            print $tagged_text."\t".$type."\t".$id."\n";
         }
     }
 }
