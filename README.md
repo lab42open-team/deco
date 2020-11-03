@@ -18,6 +18,12 @@ convert test.pdf test/images.png
 for f in *.png; do tesseract -l eng $f ${f%".png"}; done
 ```
 
+Then we can combine all the pages into one txt document
+
+```
+cat *.txt >> all.txt
+```
+
 ## EXTRACT species and environments and tissues
 
 ```
@@ -37,5 +43,7 @@ To extract the names
 
 ```
 more tool-template-gnfinder.json | jq '.names[] | {name: .name}'
+
+more tool-template-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > tool-template-gnfinder-species.tsv
 ```
 
