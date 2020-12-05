@@ -9,10 +9,11 @@ Scanning expedition reports, research articles and books has been well underway.
 ## Single page PNG
 
 ```
-convert test.pdf test/images.png
+convert -density 400 legacy-literature.pdf -quality 100 tool-testing-template.png
 ```
 
 ## OCR
+To scan tables use [PyTesseract](https://fazlurnu.com/2020/06/23/text-extraction-from-a-table-image-using-pytesseract-and-opencv/)
 
 ```
 for f in *.png; do tesseract -l eng $f ${f%".png"}; done
