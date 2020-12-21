@@ -6,7 +6,7 @@ library(taxize)
 library(worrms)
 
 ## Manual curation
-manual_ipt <-readxl::read_excel("occurrence_Forbes_ipt.xls")
+manual_ipt<-readxl::read_excel("occurrence_Forbes_ipt.xls")
 
 ## NER
 
