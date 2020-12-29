@@ -34,16 +34,20 @@ recall_species <- manual_ipt_species %>% mutate(gnfinder=as.numeric(scientificNa
 
 precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName))
 
+recall_species_gnfinder <- sum(recall_species$gnfinder)/(sum(recall_species$gnfinder)+nrow(filter(recall_species, gnfinder==0)))
+
+recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_species$extract_species)+nrow(filter(recall_species, extract_species==0)))
+
 
 
 ## Precision Recall Curve
-ggplot()+
-  geom_line(data = df_roc_bet, aes(x = V1,y = V2, color="GNfinder" ))+
-  scale_colour_manual(values = c("GNfinder"="red"), name="Methods")+
-  ggtitle("Precision Recall Curve")+
-  labs(x="Recall", y="Precision")+
-  theme_bw()+
-  coord_fixed(ratio = 1)+
-  theme(panel.grid.minor = element_blank(), panel.grid.major = element_blank())
+#ggplot()+
+#  geom_line(data = df_roc_bet, aes(x = V1,y = V2, color="GNfinder" ))+
+#  scale_colour_manual(values = c("GNfinder"="red"), name="Methods")+
+#  ggtitle("Precision Recall Curve")+
+#  labs(x="Recall", y="Precision")+
+#  theme_bw()+
+#  coord_fixed(ratio = 1)+
+#  theme(panel.grid.minor = element_blank(), panel.grid.major = element_blank())
 
 
