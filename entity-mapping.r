@@ -28,15 +28,17 @@ manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% filter(grepl(x
 ## Entity Mapping
 #get_wormsid
 
-# Precision - Recall
+# Recall
 
 recall_species <- manual_ipt_species %>% mutate(gnfinder=as.numeric(scientificName %in% gnfinder_vector$name)) %>% mutate(extract_species=as.numeric(scientificName %in% extract_organisms$`tagged text`))
-
-precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName))
 
 recall_species_gnfinder <- sum(recall_species$gnfinder)/(sum(recall_species$gnfinder)+nrow(filter(recall_species, gnfinder==0)))
 
 recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_species$extract_species)+nrow(filter(recall_species, extract_species==0)))
+
+# Precision
+
+precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
 
 
 
