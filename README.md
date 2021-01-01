@@ -6,7 +6,23 @@ A new, upgraded report (part of EMODnet Phase III, available [here](https://www.
 
 ![Figure 1. The proposed workflows with the available tools. On the left, the GUI web applications are dispayed and on the right the programming libraries and command line tools.](gui-cli-workflows.png)
 
-This repository is supplementary to this report for the programming / Command Line Interface workflow. 
+This repository is supplementary to this report for the programming / Command Line Interface workflow.
+
+## Prerequisites
+
+All the following code was tested on a mac running macOS Catalina 10.15.7.
+
+### System Tools
+
+* GNU bash, version 3.2.57
+* R version 4.0.3
+* perl v5.32.0
+* awk version 20070501
+
+### Workflow Tools
+
+
+
 ## Scan to pdf
 
 Scanning expedition reports, research articles and books has been well underway.
