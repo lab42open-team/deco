@@ -3,7 +3,7 @@
 # Ignore large datasets
 /dwca-biomaerl-v1
 /reportofbritisha1843
-/ocr-test_SCAN-vliz
+/ocr-test-SCAN-vliz
 
 # Ignore NCBI taxonomy files
 /ncbi_taxonomy
