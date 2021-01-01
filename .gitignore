@@ -1,1 +1,13 @@
+# The following files and directories are not included in the repo
+
+# Ignore large datasets
+/dwca-biomaerl-v1
+/reportofbritisha1843
+/ocr-test_SCAN-vliz
+
+# Ignore NCBI taxonomy files
+/ncbi_taxonomy
+
+# temporal files
+*.DS_Store
 *.swp
