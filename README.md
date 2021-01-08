@@ -14,19 +14,23 @@ All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5
 
 ### System Tools
 
-* GNU bash, version 3.2.57
-* R version 4.0.3
-* perl v5.32.0
-* awk version 20070501
+* GNU bash, version: 3.2.57
+* R version: 4.0.3
+* perl version: 5.32.0
+
+### Data transformation tools
+
+* awk version: 20070501
+* ghostscript version: 9.53.3
+* ImageMagick version: 7.0.10-30
+* jq version: 1.6
+* tidyverse R package suite version: 1.3.0
 
 ### Workflow Tools
 
-* ghostscript version: 9.53.3
-* ImageMagick version: 7.0.10-30
 * Tesseract OCR version: 4.1.1
 * gnfinder version: v0.11.1
 * EXTRACT version: 2
-* tidyverse R package suite version: 1.3.0
 * taxize R package version: 0.9.99
 
 
