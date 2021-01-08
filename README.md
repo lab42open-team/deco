@@ -8,7 +8,11 @@ This repository is supplementary to this report for the programming / Command Li
 
 ![Figure 1. The proposed workflows with the available tools. On the left, the GUI web applications are displayed and on the right the programming libraries and command line tools.](gui-cli-workflows.png)
 
-*Figure 1.* The proposed workflows with the available tools. On the left, the GUI web applications are displayed and on the right the programming libraries and command line tools. This repo contains the scripts to use the CLI and programming tools for this workflow.
+**Figure 1.** The proposed workflows with the available tools. On the left, the GUI web applications are displayed and on the right the programming libraries and command line tools. This repo contains the scripts to use the CLI and programming tools for this workflow.
+
+## Repository structure
+
+
 
 ## Prerequisites
 
@@ -42,20 +46,20 @@ All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5
 Scanning expedition reports, research articles and books has been well underway. [Biodiversity Heritage Library](https://www.biodiversitylibrary.org) contains many such publications which in some cases have been OCRed using the [ABBYY FineReader tool](https://about.biodiversitylibrary.org/ufaqs/what-is-optical-character-recognition-ocr-and-how-does-bhl-use-it/). When that is case of a PDF file it is possible to extract the text directly. The command-line tool that has this functionality is `ghostscript` and the basic command is `gs`.
 
 ```
-gs -sDEVICE=txtwrite -o output.txt input.pdf
+gs -sDEVICE=txtwrite -o output.txt legacy-literature.pdf
 ```
-With the above command the text from the input.pdf file is extracted and saved into output.txt making ready for following tools.
+With the above command the text from the legacy-literature.pdf file is extracted and saved into output.txt making ready for following tools.
 
 ### Scanned PDF without OCR
 
-In cases that the PDF file is a collection of scanned images it is necessary to perform OCR. Single page PNG
+In cases that the PDF file is a collection of scanned images it is necessary to perform OCR. In this workflow we choose the tesseract OCR engine which is open source and active in development. Tesseract doesn't handle PDF files so we have to transform the PDF into multiple PNG files. To do this we use the ImageMagick tool and the command `convert`.
 
 ```
-convert -density 400 legacy-literature.pdf -quality 100 tool-testing-template.png
+convert -density 400 legacy-literature.pdf -quality 100 legacy-literature.png
 ```
 
-## OCR
-To scan tables use [PyTesseract](https://fazlurnu.com/2020/06/23/text-extraction-from-a-table-image-using-pytesseract-and-opencv/)
+The option `density` refers to the pixels of the image and `quality 100` is set to make sure that 100% of the quality is maintained upon transformation. 
+
 
 ```
 for f in *.png; do tesseract -l eng $f ${f%".png"}; done
@@ -64,13 +68,17 @@ for f in *.png; do tesseract -l eng $f ${f%".png"}; done
 Then we can combine all the pages into one txt document
 
 ```
-cat *.txt >> all.txt
+cat *.txt >> legacy-literature.txt
 ```
 
-## EXTRACT species and environments and tissues
+Complex documents with figures and tables can be *OCRed* with [PyTesseract](https://fazlurnu.com/2020/06/23/text-extraction-from-a-table-image-using-pytesseract-and-opencv/)
+
+## Named Entity Recognition - NER
+
+### EXTRACT species and environments and tissues
 
 ```
-./getEntities_EXTRACT_api.pl tool-testing-template.txt > tool-template-extract.tsv
+./getEntities_EXTRACT_api.pl legacy-literature.txt > legacy-literature-extract.tsv
 ```
 
 EXTRACT returns the NCBI ids. We can later transform them to names by :
@@ -96,12 +104,10 @@ awk -F'\t' 'FNR==NR{a[$1]=$3;next} ($1 in a) {print $1,a[$1],$2}' nodes_tab.tsv 
 5. Remove the NCBI prefix of EXTRACT 
 6. Merge the files
 
-
-## gnfinder
-
+### gnfinder
 
 ```
-gnfinder find tool-testing-template.txt > tool-testing-gnfinder.json
+gnfinder find legacy-literature.txt > legacy-literature-gnfinder.json
 ```
 
 This command line tool returns a json file that has 2 arrays, metadata and names.
@@ -109,9 +115,11 @@ This command line tool returns a json file that has 2 arrays, metadata and names
 To extract the names
 
 ```
-more tool-template-gnfinder.json | jq '.names[] | {name: .name}'
-
-more tool-template-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > tool-template-gnfinder-species.tsv
+more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > legacy-literature-gnfinder-species.tsv
 ```
-#Code for worms
+## Entity mapping
+
+
+
+## Tool performance evaluation
 
