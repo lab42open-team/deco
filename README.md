@@ -1,6 +1,6 @@
 # Workflow for legacy literature annotation EMODnet
 
-Legacy literature contains valuable information about biodiversity. Dedicated workflows are needed in order to extract this information and transform it in structured data format. This is process is a multiple step process requiring many tools and interdisciplinary knowledge. In 2015, a [workshop](httpse//riojournal.com/articles.php?journal_name=rio&id=10445) was help in [HCMR](https://www.hcmr.gr/en/) to standardise this process within the framework of [EMODnet biology](https://www.emodnet-biology.eu). 
+Legacy literature contains valuable information about biodiversity. Dedicated workflows are needed in order to extract this information and transform it in structured data format. This is process is a multiple step process requiring many tools and interdisciplinary knowledge. In 2015, a [workshop](httpse//riojournal.com/articles.php?journal_name=rio&id=10445) was help in [IMBBC - HCMR](https://imbbc.hcmr.gr) to standardise this process within the framework of [EMODnet biology](https://www.emodnet-biology.eu).
 
 A new, upgraded report (part of EMODnet Phase III, available [here](https://www.emodnet-biology.eu/sites/emodnet-biology.eu/files/public/documents/EMODnet_Biology_III/Deliverables/D3.7.pdf)) was released on 07/12/2020 that focuses on the comparison of different tools and interfaces in order to automate and assist the curation process. Specifically, tools in terms of OCR and text mining technologies were tested and reviewed with the aim to design a workflow that can accommodate the need for automation and acceleration in digitising historical datasets and extracting their information. Two types of curation workflows were described as shown in Figure 1; one that relies on web applications and the other that combines programming libraries and packages. The latter is scalable, customisable and replicable but requires programming skills whereas the former is easy to implement through Graphical User Interfaces (GUI) at the expense of the previous advantages.
 
@@ -10,7 +10,7 @@ This repository is supplementary to this report for the programming / Command Li
 
 ## Prerequisites
 
-All the following code was tested on a mac running macOS Catalina 10.15.7.
+All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz running macOS Catalina 10.15.7.
 
 ### System Tools
 
@@ -21,6 +21,13 @@ All the following code was tested on a mac running macOS Catalina 10.15.7.
 
 ### Workflow Tools
 
+* ghostscript version: 9.53.3
+* ImageMagick version: 7.0.10-30
+* Tesseract OCR version: 4.1.1
+* gnfinder version: v0.11.1
+* EXTRACT version: 2
+* tidyverse R package suite version: 1.3.0
+* taxize R package version: 0.9.99
 
 
 ## Scan to pdf
