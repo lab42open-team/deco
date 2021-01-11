@@ -121,17 +121,21 @@ awk -F'\t' 'FNR==NR{a[$1]=$3;next} ($1 in a) {print $1,a[$1],$2}' nodes_tab.tsv 
 
 ### gnfinder
 
+[`gnfinder`](https://github.com/gnames/gnfinder) is a command line tool that finds scientific names from text using dictionary and nlp approaches. It serves as the engine of the online tool [Global Names Recognition and Discovery](http://gnrd.globalnames.org/)and is also used in many other platforms like [Biodiversity Heritage Library](https://about.biodiversitylibrary.org/ufaqs/taxonomic-data-sources-for-names/) among others.
+
+
 ```
 gnfinder find legacy-literature.txt > legacy-literature-gnfinder.json
 ```
 
-This command line tool returns a json file that has 2 arrays, metadata and names.
+`gnfinder` returns a json file that has 2 arrays, metadata and names.
 
 To extract the names
 
 ```
 more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > legacy-literature-gnfinder-species.tsv
 ```
+
 ## Entity mapping
 
 
