@@ -79,11 +79,24 @@ Complex documents with figures and tables can be *OCRed* with [PyTesseract](http
 
 ### EXTRACT species and environments and tissues
 
+We used the [EXTRACT tool](https://extract.jensenlab.org/) to detect entities of species, environments and tissues for text. EXTRACT uses the API of the [JensenLab tagger](https://github.com/larsjuhljensen/tagger) through the perl script downloaded here `scripts/getEntities_EXTRACT_api.pl`.
+
+To run the script:
+
 ```
 ./getEntities_EXTRACT_api.pl legacy-literature.txt > legacy-literature-extract.tsv
 ```
 
-EXTRACT returns the NCBI ids. We can later transform them to names by :
+EXTRACT returns a tsv file with 3 columns (tagged_text, entity_type, term_id). 
+
+* tagged_text is the snippet of the matched text
+
+* entity_type is the refers to the category of the entity : species = -2, environments = -27, tissues = -25. There are others (e.g PubChem Compound identifiers = -1) but are not used in biodiversity data.
+
+* term_id is the respective id of the entity. For species EXTRACT uses NCBI ids, for environments Environment Ontology terms and for tissues BRENDA Tissue Ontology terms
+
+
+We can later transform them to names by :
 
 1. download the ttps://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 
