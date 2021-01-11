@@ -65,7 +65,7 @@ while (my $entry = <TSV>) {
 
     #print new header line
     unless ( $header_skipped ) {
-        print "tagged text"."\t"."entity type"."\t"."term id"."\n";
+        print "tagged_text"."\t"."entity_type"."\t"."term_id"."\n";
         $header_skipped = 1;
         next;
     }
