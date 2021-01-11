@@ -18,3 +18,7 @@ cat *.txt >> legacy-literature.txt
 gnfinder find legacy-literature.txt > legacy-literature-gnfinder.json
 
 more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > legacy-literature-gnfinder-species.tsv
+
+## Entity mapping
+
+
