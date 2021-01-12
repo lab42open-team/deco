@@ -12,8 +12,8 @@ This repository is supplementary to this report for the programming / Command Li
 ## Repository structure
 
 * `scripts/` contains the scripts with the code that we used in this workflow
-* `example-legacy-literature/` contains the example of the original PDF file and the OCR text.
-* `NER/` contains the output of the NER tools
+* `example-legacy-literature/` contains the example of the original PDF file and the ipt file from the results of the manual curation.
+* `output` contains the output of the workflow tools
 * `gui-tools-screenshoots/` some screenshoots of the tools that are used in the report and are mentioned in **Figure 1**
 
 ## Prerequisites
