@@ -1,12 +1,31 @@
 #!/bin/bash
 
+# Name:     cli-workflow
+#
+# Purpose:  Demonstration of a Command Line Interface workflow for biodiversity data rescue. Starting from OCR and going to NER and Entity Mapping this workflow is extentable to other tools and scalable to big libraries with biodiversity scanned documents
+#
+# Input:    A pdf file located inside the repository.
+#
+# OCR Output:   Text file containg the contents of each page of the pdf as well as the individual pages.
+# NER Output:
+# EM Output:
+#
+# Author:   Savvas Paragkamian (s.paragkamian@hcmr.gr)
+#           Institute of Marine Biology Biotechnology and Aquaculture (IMBBC)
+#           Hellenic Centre for Marine Research (HCMR)
+#
+# Created:  12/01/2021
+# License:  2-clause BSD License
+#
+# Note:     comments and specifics are given in-line and in README.md of the repository
+#
 ## example of running the script
-## ./cli-workflow.sh -f file.pdf -d folder
-## User input PDF file
+## ./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output
 
 ## Usage of the script
 usage="Use the parameter -f for the path of pdf file (inside the repository) and -d for the name of the new directory that the results will be saved in.\nExample: ./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output \n"
 
+## User input PDF file
 while getopts "f:d:" option
 do
    case "$option" in
@@ -16,7 +35,6 @@ do
       *)   echo -e "option ${OPTARG} unknown. \n$usage" ; exit 1 ;;
    esac
 done
-
 
 ## Detect if no options were passed
 if [ $OPTIND -eq 1 ]; 
@@ -38,7 +56,7 @@ echo -e "data: $pdf_file \noutput directory: $directory \n"
 ## Creation of new directory for the outputs
 
 time_start=`date +%s`
-DATE=$(date +"%Y-%m-%d")
+DATE=$(date +"%Y-%m-%d_%H-%M")
 
 ### assign a unique random tag to files.
 id=$RANDOM
@@ -52,6 +70,8 @@ cd $directory
 
 text_output=ocr-${id}.txt
 touch $text_output
+
+echo -e "workflow started on $DATE with id=$id\n"
 
 ## From pdf to text
 
@@ -73,14 +93,13 @@ echo -e "text from $pdf_file is in $directory/$text_output \n"
 ### NER
 
 #### EXTRACT
-#
-#./getEntities_EXTRACT_api.pl legacy-literature.txt > legacy-literature-extract.tsv
-#
+
+../scripts/getEntities_EXTRACT_api.pl $text_output > ${id}-extract.tsv
+
 #### gnfinder
-#
-#
-#gnfinder find legacy-literature.txt > legacy-literature-gnfinder.json
-#
-#more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > legacy-literature-gnfinder-species.tsv
+
+gnfinder find $text_output > ${id}-gnfinder.json
+
+more ${id}-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > ${id}-gnfinder-species.tsv
 
 ## Entity mapping
