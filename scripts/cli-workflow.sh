@@ -5,7 +5,7 @@
 ## User input PDF file
 
 ## Usage of the script
-usage="Use the parameter -f for the path of pdf file (full path name) and -d for the name of the new directory that the results will be saved in. \n"
+usage="Use the parameter -f for the path of pdf file (inside the repository) and -d for the name of the new directory that the results will be saved in.\nExample: ./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output \n"
 
 while getopts "f:d:" option
 do
@@ -45,7 +45,6 @@ id=$RANDOM
 
 script_path="${BASH_SOURCE[0]}"
 cd `dirname "$script_path"`
-echo `dirname "$script_path"`
 
 cd ../
 mkdir -p $directory;
@@ -54,12 +53,11 @@ cd $directory
 text_output=ocr-${id}.txt
 touch $text_output
 
-
 ## From pdf to text
 
 ### break into single pages of images with ImageMagick
 echo -e "conversion started \n"
-convert -density 400 $pdf_file -quality 100 ${id}.png
+convert -density 400 ../$pdf_file -quality 100 ${id}.png
 
 ### from images to text files
 
@@ -71,6 +69,7 @@ for f in ${id}*.png; do tesseract -l eng $f ${f%".png"}; done
 cat ${id}*.txt > $text_output
 
 echo -e "text from $pdf_file is in $directory/$text_output \n"
+
 ### NER
 
 #### EXTRACT
