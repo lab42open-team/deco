@@ -103,3 +103,4 @@ gnfinder find $text_output > ${id}-gnfinder.json
 more ${id}-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > ${id}-gnfinder-species.tsv
 
 ## Entity mapping
+
