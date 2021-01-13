@@ -1,4 +1,6 @@
-# Workflow for legacy literature annotation EMODnet
+# Programming Workflow for biodiversity legacy literature annotation
+
+## Introduction
 
 Legacy literature contains valuable information about biodiversity. Dedicated workflows are needed in order to extract this information and transform it in structured data format. This is process is a multiple step process requiring many tools and interdisciplinary knowledge. In 2015, a [workshop](httpse//riojournal.com/articles.php?journal_name=rio&id=10445) was help in [IMBBC - HCMR](https://imbbc.hcmr.gr) to standardize this process within the framework of [EMODnet biology](https://www.emodnet-biology.eu).
 
@@ -7,7 +9,12 @@ A new, upgraded report (part of EMODnet Phase III, available [here](https://www.
 This repository is supplementary to this report for the programming / Command Line Interface workflow. It aims to provide the basis for it's implementation accompanied with an example.
 <img src="gui-cli-workflows.png" width="60%">
 
-**Figure 1.** The proposed workflows with the available tools. On the left, the GUI web applications are displayed and on the right the programming libraries and command line tools. This repository contains the scripts to use the CLI and programming tools for this workflow.
+**Figure 1.** The proposed workflows with the available tools. On the left, the GUI web applications are displayed and on the right the programming libraries and command line tools. This repository contains the scripts to use the CLI and programming tools for this workflow. 
+
+## Purpose
+
+This workflow is a demonstration of our vision and not a complete pipeline tool for biodiversity data rescue. It brings together state of the art image processing and OCR tools with text mining technologies and Web APIs in order to assist curators. Furthermore, by using programming interface and Command Line Tools this workflow is scalable and customisable.
+Note that not all tools that appear in Figure 1 are included in this workflow.
 
 ## Repository structure
 
@@ -18,7 +25,7 @@ This repository is supplementary to this report for the programming / Command Li
 
 ## Prerequisites
 
-All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz running macOS Catalina 10.15.7.
+NOTE: All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz running macOS Catalina 10.15.7.
 
 ### System Tools
 
@@ -40,6 +47,21 @@ All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5
 * gnfinder version: v0.11.1
 * EXTRACT version: 2
 * taxize R package version: 0.9.99
+
+## Running the workflow
+
+To run this workflow execute the following command:
+
+```
+./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output
+```
+There are two options required, -f that specifies the location of the pdf file within the repo and -d that specifies the new folder name that all the outputs will be saved. On each run an id is created that is written on the filename of all generated files. The generated files are: 
+
+* `png` files for each page of the pdf file
+* `txt` files for each page of the pdf file
+* `extract.tsv` file with the NER results of the EXTRACT API
+* `json` file from the gnfinder tool
+* `gnfinder.tsv` file transformed from the previous json file
 
 ## PDF text extraction
 
@@ -141,4 +163,7 @@ more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | 
 
 
 ## Tool performance evaluation
+
+
+
 
