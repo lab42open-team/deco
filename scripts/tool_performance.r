@@ -7,21 +7,19 @@ library(taxize)
 library(worrms)
 
 ## Manual curation
-manual_ipt<-readxl::read_excel("occurrence_Forbes_ipt.xls") %>% select(scientificName, fieldNumber, catalogNumber, occurrenceID) %>% distinct()
+manual_ipt<-readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls") %>% select(scientificName, fieldNumber, catalogNumber, occurrenceID) %>% distinct()
 
 ## NER
 
-extract_associations <- read_delim("extract-forbes.tsv",delim="\t")
+extract_associations <- read_delim("../output/30815-extract.tsv",delim="\t")
 
-extract_organisms <- extract_associations %>% filter(`entity type`==-2) %>% distinct()
+extract_organisms <- extract_associations %>% filter(entity_type==-2) %>% distinct()
 
-gnfinder_organisms <- jsonlite::read_json("gnfinder-forbes.json",simplifyVector = TRUE)
+gnfinder_organisms <- jsonlite::read_json("../output/30815-gnfinder.json",simplifyVector = TRUE)
 
 gnfinder_vector <- as_tibble(unique(gnfinder_organisms[[2]][3]))
 
-
 gnfinder_species_vector <- gnfinder_vector %>% filter(grepl(x=name, pattern='\\w \\w'))
-
 
 manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% filter(grepl(x=scientificName, pattern='\\w \\w'))
 
@@ -30,7 +28,7 @@ manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% filter(grepl(x
 
 # Recall
 
-recall_species <- manual_ipt_species %>% mutate(gnfinder=as.numeric(scientificName %in% gnfinder_vector$name)) %>% mutate(extract_species=as.numeric(scientificName %in% extract_organisms$`tagged text`))
+recall_species <- manual_ipt_species %>% mutate(gnfinder=as.numeric(scientificName %in% gnfinder_vector$name)) %>% mutate(extract_species=as.numeric(scientificName %in% extract_organisms$tagged_text))
 
 recall_species_gnfinder <- sum(recall_species$gnfinder)/(sum(recall_species$gnfinder)+nrow(filter(recall_species, gnfinder==0)))
 
@@ -39,8 +37,6 @@ recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_specie
 # Precision
 
 precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
-
-
 
 ## Precision Recall Curve
 #ggplot()+
