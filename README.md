@@ -13,7 +13,7 @@ This repository is supplementary to this report for the programming / Command Li
 
 ## Purpose
 
-This workflow is a demonstration of our vision and not a complete pipeline tool for biodiversity data rescue. It brings together state of the art image processing and OCR tools with text mining technologies and Web APIs in order to assist curators. Furthermore, by using programming interface and Command Line Tools this workflow is scalable and customisable.
+This workflow is a demonstration of our vision, and not a complete pipeline tool, for biodiversity data rescue using programming tools. It brings together state of the art image processing and OCR tools with text mining technologies and Web APIs in order to assist curators. Furthermore, by using programming interface and Command Line Tools this workflow is scalable and customisable.
 Note that not all tools that appear in Figure 1 are included in this workflow.
 
 ## Repository structure
@@ -48,7 +48,7 @@ NOTE: All the following code was tested on a mac with 8gb RAM and Intel(R) Core(
 * EXTRACT version: 2
 * taxize R package version: 0.9.99
 
-## Running the workflow
+## Running instructions
 
 To run this workflow execute the following command:
 
@@ -118,29 +118,6 @@ EXTRACT returns a tsv file with 3 columns (tagged_text, entity_type, term_id).
 * term_id is the respective id of the entity. For species EXTRACT uses NCBI ids, for environments Environment Ontology terms and for tissues BRENDA Tissue Ontology terms
 
 
-We can later transform them to names by :
-
-1. download the ttps://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-
-```
-wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-```
-2. use the node.dmp (we need the tax id and rank id columns) and names.dmp (we need the tax id and names in text)
-3. change the delimiter from \t|\t to \t
-
-```
-more nodes.dmp | sed 's/:ctrl-v-tab:\|//g' > nodes_tab.tsv
-
-more names.dmp | sed 's/:ctrl-v-tab:\|//g' > names_tab.tsv
-```
-4. merge the node.dmp and names.dmp based on the first column
-
-```
-awk -F'\t' 'FNR==NR{a[$1]=$3;next} ($1 in a) {print $1,a[$1],$2}' nodes_tab.tsv names_tab.tsv > ncbi_nodes_names.tsv
-```
-5. Remove the NCBI prefix of EXTRACT 
-6. Merge the files
-
 ### gnfinder
 
 [`gnfinder`](https://github.com/gnames/gnfinder) is a command line tool that finds scientific names from text using dictionary and nlp approaches. It serves as the engine of the online tool [Global Names Recognition and Discovery](http://gnrd.globalnames.org/)and is also used in many other platforms like [Biodiversity Heritage Library](https://about.biodiversitylibrary.org/ufaqs/taxonomic-data-sources-for-names/) among others.
@@ -164,6 +141,12 @@ more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | 
 
 ## Tool performance evaluation
 
+Using standard methodology for evaluation the results from each tool can be classified with the following conditions by comparing them withe manual curated spreadsheet.
+
+| Condition positive | Condition negative |
+| :----:       |    :----:   |
+| True Positive (TP) | False positive (FP) |
+| False negative (FN) | True negative (TN) |
 
 
 
