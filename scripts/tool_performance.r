@@ -38,6 +38,28 @@ recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_specie
 
 precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
 
+
+#We can later transform them to names by :
+#1. download the ttps://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+#
+#```
+#wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+#```
+#2. use the node.dmp (we need the tax id and rank id columns) and names.dmp (we need the tax id and names in text)
+#3. change the delimiter from \t|\t to \t
+#
+#```
+#more nodes.dmp | sed 's/:ctrl-v-tab:\|//g' > nodes_tab.tsv
+#
+#more names.dmp | sed 's/:ctrl-v-tab:\|//g' > names_tab.tsv
+#```
+#4. merge the node.dmp and names.dmp based on the first column
+#
+#```
+#awk -F'\t' 'FNR==NR{a[$1]=$3;next} ($1 in a) {print $1,a[$1],$2}' nodes_tab.tsv names_tab.tsv > ncbi_nodes_names.tsv
+#```
+#5. Remove the NCBI prefix of EXTRACT 
+#6. Merge the files
 ## Precision Recall Curve
 #ggplot()+
 #  geom_line(data = df_roc_bet, aes(x = V1,y = V2, color="GNfinder" ))+
