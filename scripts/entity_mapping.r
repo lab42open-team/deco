@@ -4,7 +4,6 @@
 
 # Packages
 library(tidyverse)
-library(worrms)
 library(httr)
 
 ## Input
@@ -16,8 +15,22 @@ extract_org <- extract %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI
 
 ## function to call the worms API based on a NCBI Taxonomy id
 
-worms_ncbi_api <- function(ncbi_id){
-    url <- paste("http://www.marinespecies.org/rest/AphiaRecordByExternalID/",ncbi_id,"?type=ncbi",sep="")
+worms_api <- function(tool,name_id){
+    
+    if (tool=="EXTRACT") {
+
+        ## worms API based on NCBI ids
+        url <- paste("http://www.marinespecies.org/rest/AphiaRecordByExternalID/",name_id,"?type=ncbi",sep="")
+
+    } else if (tool=="gnfinder") {
+        
+        ## worms API based on names
+        url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByNames?scientificnames[]=",name_id,"&like=false&marine_only=false",sep="")
+    } else {
+        print("Please choose between 'EXTRACT' and 'gnfinder' for the worms API")
+        break
+    }
+
     get_url <- GET(url)
     message_for_status(get_url)
     worms_status <- status_code(get_url)
@@ -31,24 +44,7 @@ worms_ncbi_api <- function(ncbi_id){
         return(worms_status)
     }
 }
-## function to call the worms API based on names
-worms_names_api <- function(organism_name){
-    
-    url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByNames?scientificnames[]=",organism_name,"&like=false&marine_only=false",sep="")
-    
-    get_url <- GET(url)
-    message_for_status(get_url)
-    worms_status <- status_code(get_url)
-    worms_content <- content(get_url)
-    
-    if (worms_status==200){
 
-        return(worms_content)
-    } else {
-
-        return(worms_status)
-    }
-}
 # function to remove NULL values from the list
 list_null <- function(x) {
 
@@ -59,9 +55,10 @@ list_null <- function(x) {
     }
 }
 
+vector_ids <- extract_org[,4]
 worms_content <- list()
 
-worms_df <- data.frame(matrix(data = NA,nrow= nrow(extract_org),ncol=28))
+worms_df <- data.frame(matrix(data = NA,nrow= lenght(vector_ids),ncol=28))
 
 colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id")
 
@@ -98,8 +95,6 @@ write_delim(worms_df, "../output/extract_organisms_worms.tsv", delim="\t", col_n
 ## get worms id from scientific names
 
 gnfinder_names_url <- gsub(gnfinder$X1, pattern=" ", replacement="%20")
-
-
 
 
 
