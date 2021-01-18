@@ -11,7 +11,7 @@ worms_api <- function(tool,id_query){
     } else if (tool=="gnfinder") {
         
         ## worms API based on names
-        url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByNames?scientificnames[]=",id_query,"&like=false&marine_only=false",sep="")
+        url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByName/",id_query,"?like=true&marine_only=false&offset=1",sep="")
     } else {
         print("Please choose between 'EXTRACT' and 'gnfinder' for the worms API")
         break
@@ -60,6 +60,8 @@ get_AphiaIDs <- function(tool,vector_ids) {
         worms_df$tool[i] <- tool
         worms_content <- worms_api(tool,id_query)
         
+       # if (length(worms_content[[1]]>1))
+
         if (!is.numeric(worms_content)) {
                  worms_content <- lapply(worms_content, list_null)
         }
