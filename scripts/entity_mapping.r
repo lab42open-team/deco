@@ -15,17 +15,17 @@ extract_org <- extract %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI
 
 ## function to call the worms API based on a NCBI Taxonomy id
 
-worms_api <- function(tool,name_id){
+worms_api <- function(tool,id_query){
     
     if (tool=="EXTRACT") {
 
         ## worms API based on NCBI ids
-        url <- paste("http://www.marinespecies.org/rest/AphiaRecordByExternalID/",name_id,"?type=ncbi",sep="")
+        url <- paste("http://www.marinespecies.org/rest/AphiaRecordByExternalID/",id_query,"?type=ncbi",sep="")
 
     } else if (tool=="gnfinder") {
         
         ## worms API based on names
-        url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByNames?scientificnames[]=",name_id,"&like=false&marine_only=false",sep="")
+        url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByNames?scientificnames[]=",id_query,"&like=false&marine_only=false",sep="")
     } else {
         print("Please choose between 'EXTRACT' and 'gnfinder' for the worms API")
         break
@@ -55,39 +55,45 @@ list_null <- function(x) {
     }
 }
 
-vector_ids <- extract_org[,4]
-worms_content <- list()
 
-worms_df <- data.frame(matrix(data = NA,nrow= lenght(vector_ids),ncol=28))
+get_AphiaIDs <- function(tool,vector_ids) {
 
-colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id")
+    tool <- tool
+    vector_ids <- vector_ids
+    worms_content <- list()
 
-for (i in seq(1,length(vector_ids),by=1)){
-    
-    id_query=as.character(vector_ids[i])
-    worms_df$id[i] <- id_query
-    
-    worms_content <- worms_ncbi_api(id_query)
-    
-    if (!is.numeric(worms_content)) {
-             worms_content <- lapply(worms_content, list_null)
-    }
+    worms_df <- data.frame(matrix(data = NA,nrow= length(vector_ids),ncol=29))
 
-    for (j in seq(1,27,by=1)) {
+    colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id","tool")
 
+    for (i in seq(1,length(vector_ids),by=1)){
+        
+        id_query=as.character(vector_ids[i])
+        worms_df$id[i] <- id_query
+        worms_df$tool[i] <- tool
+        worms_content <- worms_api(tool,id_query)
+        
         if (!is.numeric(worms_content)) {
-            
-            worms_df[i,j] <- worms_content[[j]]
-
-        } else {
-
-            worms_df[i,j] <- worms_content
+                 worms_content <- lapply(worms_content, list_null)
         }
+
+        for (j in seq(1,27,by=1)) {
+
+            if (!is.numeric(worms_content)) {
+                
+                worms_df[i,j] <- worms_content[[j]]
+
+            } else {
+
+                worms_df[i,j] <- worms_content
+            }
+        }
+        ## not to overload the Worms server
+        Sys.sleep(0.5)
     }
-
-    Sys.sleep(0.5)
+    
+    return(worms_df)
 }
-
 ## Output of NCBI to worms id
 
 write_delim(worms_df, "../output/extract_organisms_worms.tsv", delim="\t", col_names=T)
