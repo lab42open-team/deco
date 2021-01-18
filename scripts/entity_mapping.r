@@ -57,7 +57,6 @@ for (i in seq(1,nrow(extract_org),by=1)){
     }
 
     for (j in seq(1,27,by=1)) {
-        print(j)
 
         if (!is.numeric(worms_content)) {
             
@@ -71,6 +70,11 @@ for (i in seq(1,nrow(extract_org),by=1)){
 
     Sys.sleep(0.5)
 }
+
+
+## Output
+
+write_delim(worms_df, "../output/extract_organisms_worms.tsv", delim="\t", col_names=T)
 
 ## get worms id
 
