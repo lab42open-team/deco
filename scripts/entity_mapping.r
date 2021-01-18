@@ -14,7 +14,9 @@ extract_org <- extract %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI
 
 ## get worms id from ncbi id
 
-worms_api <- function(ncbi_id){
+## function to call the worms API based on a NCBI Taxonomy id
+
+worms_ncbi_api <- function(ncbi_id){
     url <- paste("http://www.marinespecies.org/rest/AphiaRecordByExternalID/",ncbi_id,"?type=ncbi",sep="")
     get_url <- GET(url)
     message_for_status(get_url)
@@ -29,7 +31,25 @@ worms_api <- function(ncbi_id){
         return(worms_status)
     }
 }
+## function to call the worms API based on names
+worms_names_api <- function(organism_name){
+    
+    url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByNames?scientificnames[]=",organism_name,"&like=false&marine_only=false",sep="")
+    
+    get_url <- GET(url)
+    message_for_status(get_url)
+    worms_status <- status_code(get_url)
+    worms_content <- content(get_url)
+    
+    if (worms_status==200){
 
+        return(worms_content)
+    } else {
+
+        return(worms_status)
+    }
+}
+# function to remove NULL values from the list
 list_null <- function(x) {
 
     if (is.null(x)){
@@ -43,14 +63,14 @@ worms_content <- list()
 
 worms_df <- data.frame(matrix(data = NA,nrow= nrow(extract_org),ncol=28))
 
-colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","ncbi")
+colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id")
 
-for (i in seq(1,nrow(extract_org),by=1)){
+for (i in seq(1,length(vector_ids),by=1)){
     
-    ncbi=as.character(extract_org[i,4])
-    worms_df$ncbi[i] <- ncbi
+    id_query=as.character(vector_ids[i])
+    worms_df$id[i] <- id_query
     
-    worms_content <- worms_api(ncbi)
+    worms_content <- worms_ncbi_api(id_query)
     
     if (!is.numeric(worms_content)) {
              worms_content <- lapply(worms_content, list_null)
@@ -71,12 +91,18 @@ for (i in seq(1,nrow(extract_org),by=1)){
     Sys.sleep(0.5)
 }
 
-
-## Output
+## Output of NCBI to worms id
 
 write_delim(worms_df, "../output/extract_organisms_worms.tsv", delim="\t", col_names=T)
 
-## get worms id
+## get worms id from scientific names
+
+gnfinder_names_url <- gsub(gnfinder$X1, pattern=" ", replacement="%20")
+
+
+
+
+
 
 #worms_id <- as.data.frame(get_wormsid(as.vector(gnfinder$X1),fuzzy=T, rows=1))
 
@@ -84,4 +110,3 @@ write_delim(worms_df, "../output/extract_organisms_worms.tsv", delim="\t", col_n
 #
 
 
-# In order not to overload the E-utility servers, NCBI recommends that users post no more than three URL requests per second and limit large jobs to either weekends or between 9:00 PM and 5:00 AM Eastern time during weekdays. 
