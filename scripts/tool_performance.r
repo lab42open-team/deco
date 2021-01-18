@@ -39,6 +39,7 @@ recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_specie
 precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
 
 
+# Steps to get the names of species from NCBI ids using ftp download files from NCBI. Attention for big files >818M.
 #We can later transform them to names by :
 #1. download the ttps://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 #
@@ -60,14 +61,3 @@ precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=
 #```
 #5. Remove the NCBI prefix of EXTRACT 
 #6. Merge the files
-## Precision Recall Curve
-#ggplot()+
-#  geom_line(data = df_roc_bet, aes(x = V1,y = V2, color="GNfinder" ))+
-#  scale_colour_manual(values = c("GNfinder"="red"), name="Methods")+
-#  ggtitle("Precision Recall Curve")+
-#  labs(x="Recall", y="Precision")+
-#  theme_bw()+
-#  coord_fixed(ratio = 1)+
-#  theme(panel.grid.minor = element_blank(), panel.grid.major = element_blank())
-
-
