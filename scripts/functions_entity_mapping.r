@@ -43,9 +43,9 @@ list_null <- function(x) {
 
 # Main function. It requires the tool names, currently EXTRACT and gnfinder to output a dataframe with all the information stored in Worms database.
 #
-get_AphiaIDs <- function(tool,vector_ids) {
+get_AphiaIDs_extract <- function(vector_ids) {
 
-    tool <- tool
+    tool <- "EXTRACT"
     vector_ids <- vector_ids
     worms_content <- list()
 
@@ -56,11 +56,12 @@ get_AphiaIDs <- function(tool,vector_ids) {
     for (i in seq(1,length(vector_ids),by=1)){
         
         id_query=as.character(vector_ids[i])
+        worms_content <- worms_api(tool,id_query)
+
         worms_df$id[i] <- id_query
         worms_df$tool[i] <- tool
-        worms_content <- worms_api(tool,id_query)
         
-       # if (length(worms_content[[1]]>1))
+       # if (length(worms_content>1))
 
         if (!is.numeric(worms_content)) {
                  worms_content <- lapply(worms_content, list_null)
@@ -80,6 +81,52 @@ get_AphiaIDs <- function(tool,vector_ids) {
         ## not to overload the Worms server
         Sys.sleep(0.5)
     }
+    
+    return(worms_df)
+}
+
+get_AphiaIDs_gnfinder <- function(vector_ids) {
+
+    tool <- "gnfinder"
+    vector_ids <- vector_ids
+    worms_content <- list()
+
+    worms_df <- data.frame(matrix(data = NA,nrow=1,ncol=29))
+
+
+    for (i in seq(1,length(vector_ids),by=1)){
+        
+        id_query=as.character(vector_ids[i])
+        worms_content <- worms_api(tool,id_query)
+        row_result <- data.frame(matrix(data = NA,nrow=length(worms_content),ncol=29))
+
+        for (l in length(worms_content)){
+
+            row_result[l,28] <- id_query
+            row_result[l,29] <- tool
+
+            if (!is.numeric(worms_content[[l]])) {
+                     worms_content <- lapply(worms_content, list_null)
+            }
+
+            for (j in seq(1,27,by=1)) {
+
+                if (!is.numeric(worms_content[[l]])) {
+                    
+                    row_result[l,j] <- worms_content[[l]][j]
+
+                } else {
+
+                    row_result[l,j] <- worms_content
+                }
+            }
+            ## not to overload the Worms server
+        }
+        rbind(worms_df,row_result)
+        Sys.sleep(0.5)
+    }
+
+    colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id","tool")
     
     return(worms_df)
 }
