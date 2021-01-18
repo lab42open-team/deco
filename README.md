@@ -137,7 +137,7 @@ more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | 
 
 ## Entity mapping
 
-
+$$x=\sqrt{2}$$
 
 ## Tool performance evaluation
 
