@@ -137,7 +137,7 @@ more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | 
 
 ## Entity mapping
 
-$$x=\sqrt{2}$$
+The goal in this workflow is to reach to Arphia Ids for organisms mentioned in historical data. The `gnfinder` and `EXTRACT` tools return scientific names and NCBI ids, respectively.
 
 ## Tool performance evaluation
 
@@ -148,5 +148,9 @@ Using standard methodology for evaluation the results from each tool can be clas
 | True Positive (TP) | False positive (FP) |
 | False negative (FN) | True negative (TN) |
 
+## Future improvements
 
+* incorporate geolocation mining technologies in the workflow like [`CLEAR Earth`](https://github.com/ClearEarthProject/ClearEarthNLP)
+* process at the paragraph level to retrieve co-occurrencies of organisms and environments
+* further optimize the output in [Darwin Core format](https://dwc.tdwg.org)
 
