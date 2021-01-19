@@ -96,22 +96,18 @@ get_AphiaIDs_gnfinder <- function(vector_ids) {
 
     for (i in seq(1,length(vector_ids),by=1)){
 
-        print(paste(i,"length"))
         id_query=as.character(vector_ids[i])
         worms_content <- worms_api(tool,id_query)
         row_result <- data.frame(matrix(data = NA,nrow=length(worms_content),ncol=29))
 
         for (l in seq(1,length(worms_content),by=1)){
 
-            print(paste(l,"return size"))
             row_result[l,28] <- id_query
             row_result[l,29] <- tool
 
 
             for (j in seq(1,27,by=1)) {
 
-                print(paste(j,"values"))
-                
                 if (!is.numeric(worms_content[[l]])) {
                     
                     worms_content[[l]] <- lapply(worms_content[[l]], list_null)
@@ -126,7 +122,6 @@ get_AphiaIDs_gnfinder <- function(vector_ids) {
             ## not to overload the Worms server
         }
 
-        print(row_result)
         worms_df <- bind_rows(row_result, worms_df)
         Sys.sleep(0.5)
     }
