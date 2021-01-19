@@ -104,3 +104,6 @@ more ${id}-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 
 
 ## Entity mapping
 
+Rscript "../scripts/entity_mapping.r" "$id"
+ 
+## end of script
