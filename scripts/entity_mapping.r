@@ -10,7 +10,6 @@ library(httr)
 source('functions_entity_mapping.r')
 
 ## Input
-rms_content)
 gnfinder <- read_delim("../output/30815-gnfinder-species.tsv", delim="\t",col_names=F)
 extract_file <- read_delim("../output/30815-extract.tsv", delim="\t",col_names=T) %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
 
