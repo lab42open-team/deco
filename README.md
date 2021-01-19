@@ -65,6 +65,8 @@ There are two options required, -f that specifies the location of the pdf file w
 * `extract_organisms_worms.tsv` Aphia Ids and their data
 * `gnfinder-species_worms.tsv` Aphia Ids and their data
 
+The workflow takes 28 minutes to execute the provided example. The first 6 minutes are OCR and the rest are the API calls from EXTRACT and Worms API.
+
 ## PDF text extraction
 
 ### OCR-ready PDF
