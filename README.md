@@ -50,7 +50,7 @@ NOTE: All the following code was tested on a mac with 8gb RAM and Intel(R) Core(
 
 ## Running instructions
 
-To run this workflow execute the following command:
+This workflow uses APIs in NER and Entity Mapping so be sure to have a stable internet connection. To run this workflow execute the following command:
 
 ```
 ./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output
@@ -62,6 +62,8 @@ There are two options required, -f that specifies the location of the pdf file w
 * `extract.tsv` file with the NER results of the EXTRACT API
 * `json` file from the gnfinder tool
 * `gnfinder.tsv` file transformed from the previous json file
+* `extract_organisms_worms.tsv` Aphia Ids and their data
+* `gnfinder-species_worms.tsv` Aphia Ids and their data
 
 ## PDF text extraction
 
@@ -137,7 +139,7 @@ more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | 
 
 ## Entity mapping
 
-The goal in this workflow is to reach to Arphia Ids for organisms mentioned in historical data. The `gnfinder` and `EXTRACT` tools return scientific names and NCBI ids, respectively.
+The goal in this workflow is to reach to Aphia Ids for organisms mentioned in historical data. The `gnfinder` and `EXTRACT` tools return scientific names and NCBI ids, respectively.
 
 ## Tool performance evaluation
 
@@ -154,3 +156,6 @@ Using standard methodology for evaluation the results from each tool can be clas
 * process at the paragraph level to retrieve co-occurrencies of organisms and environments
 * further optimize the output in [Darwin Core format](https://dwc.tdwg.org)
 
+## Licence
+
+All code provided here holds the 2-Clause BSD License.
