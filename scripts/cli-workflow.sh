@@ -77,7 +77,9 @@ echo -e "workflow started on $DATE with id=$id\n"
 
 ### break into single pages of images with ImageMagick
 echo -e "conversion started \n"
-convert -density 400 ../$pdf_file -quality 100 ${id}.png
+
+convert -density 300 ../$pdf_file -quality 100 -monitor -verbose ${id}-%04d.png
+# be careful with large pdfs because imagemagick creates huge temporal files.
 
 ### from images to text files
 
