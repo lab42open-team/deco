@@ -107,10 +107,11 @@ gnfinder find $text_output > ${id}-gnfinder.json
 more ${id}-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > ${id}-gnfinder-species.tsv
 
 ## Entity mapping
+cd ../
 
 echo -e "Now performing Entity Mapping of organisms to Aphia Ids... API is invoked, be sure to have a stable internet connection."
 
-Rscript "../scripts/entity_mapping.r" "$id"
+Rscript "scripts/entity_mapping.r" "$id"
 echo -e "Finished!"
 
 ## end of script
