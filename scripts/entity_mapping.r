@@ -1,6 +1,24 @@
 #!/usr/bin/env Rscript
 
+# Name:     entity mapping of the cli-workflow to Aphia Ids
+#
+# Purpose:  Demonstration of a Command Line Interface workflow for biodiversity data rescue. Starting from OCR and going to NER and Entity Mapping this workflow is extentable to other tools and scalable to big libraries with biodiversity scanned documents
+#
+# Input:    Random id and the outputs of the EXTRACT and gnfinder tools. The organisms that these tools find are translated to Aphia Ids of the WORMS database using its API
+# 
+# Output:   Two tsv files, one for EXTRACT and one for gnfinder, that contain all 27 different elements that describe each entity of the WORMS database when the status of the API call is 200. Otherwise the status is provided instead.
+#
+# Author:   Savvas Paragkamian (s.paragkamian@hcmr.gr)
+#           Institute of Marine Biology Biotechnology and Aquaculture (IMBBC)
+#           Hellenic Centre for Marine Research (HCMR)
+#
+# Created:  12/01/2021
+# License:  2-clause BSD License
+
 ## user arguments
+
+args <- commandArgs(trailingOnly=TRUE)
+random_id <- args[1]
 
 # Packages
 library(tidyverse)
@@ -10,14 +28,14 @@ library(httr)
 source('functions_entity_mapping.r')
 
 ## Input
-gnfinder <- read_delim("../output/30815-gnfinder-species.tsv", delim="\t",col_names=F)
-extract_file <- read_delim("../output/30815-extract.tsv", delim="\t",col_names=T) %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
+extract_file <- read_delim(paste("../output/",random_id,"extract.tsv",sep=""), delim="\t",col_names=T) %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
 
+gnfinder <- read_delim(paste("../output/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F)
 
-# Output of NCBI to worms id
+## Output of NCBI to worms id
 extract_aphia_ids <- get_AphiaIDs_extract(head(extract_file$ncbi_id))
 
-write_delim(extract_aphia_ids, "../output/extract_organisms_worms.tsv", delim="\t", col_names=T)
+write_delim(extract_aphia_ids, paste("../output/",random_id,"extract_organisms_worms.tsv",sep=""), delim="\t", col_names=T)
 
 ## Output of worms id from scientific names
 
@@ -25,5 +43,4 @@ gnfinder_names_url <- gsub(gnfinder$X1, pattern=" ", replacement="%20")
 
 gnfinder_aphia_ids <- get_AphiaIDs_gnfinder(gnfinder_names_url)
 
-
-write_delim(gnfinder_aphia_ids, "../output/gnfinder_organisms_worms.tsv", delim="\t", col_names=T)
+write_delim(gnfinder_aphia_ids, paste("../output/",random_id,"gnfinder_organisms_worms.tsv", sep=""), delim="\t", col_names=T)
