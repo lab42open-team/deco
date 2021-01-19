@@ -1,0 +1,2945 @@
+{
+  "metadata": {
+    "date": "2021-01-19T12:37:57.980024+02:00",
+    "gnfinderVersion": "v0.11.1",
+    "withBayes": true,
+    "tokensAround": 0,
+    "language": "eng",
+    "detectLanguage": false,
+    "totalWords": 3561,
+    "totalCandidates": 907,
+    "totalNames": 293
+  },
+  "names": [
+    {
+      "cardinality": 1,
+      "verbatim": "Conchifera",
+      "name": "Conchifera",
+      "odds": 6758.558534308289,
+      "start": 341,
+      "end": 351,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Brachiopoda.",
+      "name": "Brachiopoda",
+      "odds": 9836.430148961097,
+      "start": 356,
+      "end": 368,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pinna squamosa......",
+      "name": "Pinna squamosa",
+      "odds": 677574.8443216353,
+      "start": 1014,
+      "end": 1034,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten sulcatus",
+      "name": "Pecten sulcatus",
+      "odds": 1684981.9958101902,
+      "start": 1041,
+      "end": 1056,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Modiola tulipa",
+      "name": "Modiola tulipa",
+      "odds": 2359667593.455703,
+      "start": 1088,
+      "end": 1102,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten polymorphus.",
+      "name": "Pecten polymorphus",
+      "odds": 491233.100585503,
+      "start": 1168,
+      "end": 1187,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Modiola barbata",
+      "name": "Modiola barbata",
+      "odds": 7068234919845.525,
+      "start": 1195,
+      "end": 1210,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Solen tenuis",
+      "name": "Solen tenuis",
+      "odds": 33550.751609538085,
+      "start": 1250,
+      "end": 1262,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nncula margaritacea.",
+      "name": "Nncula margaritacea",
+      "odds": 4204.992798281296,
+      "start": 1300,
+      "end": 1320,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cytherea chione......",
+      "name": "Cytherea chione",
+      "odds": 1896.170832738521,
+      "start": 1366,
+      "end": 1387,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "{Thracia pubescens",
+      "name": "Thracia pubescens",
+      "odds": 588079558914.2344,
+      "start": 1393,
+      "end": 1411,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ligula boysii",
+      "name": "Ligula boysii",
+      "odds": 85980.2409697707,
+      "start": 1448,
+      "end": 1461,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pandora obtusa.......,",
+      "name": "Pandora obtusa",
+      "odds": 21643019.192651432,
+      "start": 1513,
+      "end": 1535,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Artemis lincta.........",
+      "name": "Artemis lincta",
+      "odds": 140010.72556552404,
+      "start": 1544,
+      "end": 1567,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Tellina donacina......",
+      "name": "Tellina donacina",
+      "odds": 55653979481.60452,
+      "start": 1577,
+      "end": 1599,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pullastra virginea",
+      "name": "Pullastra virginea",
+      "odds": 216979016942.67206,
+      "start": 1604,
+      "end": 1622,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "'Corbula nucleus",
+      "name": "Corbula nucleus",
+      "odds": 37818864.1553483,
+      "start": 1631,
+      "end": 1647,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Venus verrucosa......",
+      "name": "Venus verrucosa",
+      "odds": 985538.8170758327,
+      "start": 1668,
+      "end": 1689,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "'Cardium echinatum...,",
+      "name": "Cardium echinatum",
+      "odds": 1986354195941.8926,
+      "start": 1695,
+      "end": 1717,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Artemis lincta.........]",
+      "name": "Artemis lincta",
+      "odds": 140010.72556552404,
+      "start": 1769,
+      "end": 1793,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Montacuta,",
+      "name": "Montacuta",
+      "odds": 66666.99976083946,
+      "start": 1836,
+      "end": 1846,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ligula boysii",
+      "name": "Ligula boysii",
+      "odds": 85980.2409697707,
+      "start": 1876,
+      "end": 1889,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nucula margaritacea...",
+      "name": "Nucula margaritacea",
+      "odds": 214526602169.53027,
+      "start": 1910,
+      "end": 1932,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lucina lactea..........",
+      "name": "Lucina lactea",
+      "odds": 17741.954485825703,
+      "start": 1940,
+      "end": 1963,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Turritella terebra",
+      "name": "Turritella terebra",
+      "odds": 2461226313880.6216,
+      "start": 2087,
+      "end": 2105,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardium rusticum...",
+      "name": "Cardium rusticum",
+      "odds": 587301371591.5114,
+      "start": 2116,
+      "end": 2135,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Parthenia",
+      "name": "Parthenia",
+      "odds": 10762.732830147137,
+      "start": 2155,
+      "end": 2164,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardita sulcata",
+      "name": "Cardita sulcata",
+      "odds": 1130917587175.284,
+      "start": 2241,
+      "end": 2256,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Patella scutellaris",
+      "name": "Patella scutellaris",
+      "odds": 2211504976.3976803,
+      "start": 2300,
+      "end": 2319,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Calyptrea sinense...",
+      "name": "Calyptrea sinense",
+      "odds": 13241818414.674974,
+      "start": 2376,
+      "end": 2396,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Rissoa monodonta....",
+      "name": "Rissoa monodonta",
+      "odds": 107860.1257368577,
+      "start": 2403,
+      "end": 2423,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Bulla hydatis",
+      "name": "Bulla hydatis",
+      "odds": 83122.24605657201,
+      "start": 2439,
+      "end": 2452,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ringuicula auriculata.!",
+      "name": "Ringuicula auriculata",
+      "odds": 17010078719849.86,
+      "start": 2471,
+      "end": 2494,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Turritella",
+      "name": "Turritella",
+      "odds": 2322371.779382462,
+      "start": 2501,
+      "end": 2511,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cerithium",
+      "name": "Cerithium",
+      "odds": 189011.9333878745,
+      "start": 2584,
+      "end": 2593,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium lima",
+      "name": "Cerithium lima",
+      "odds": 4076304.939425169,
+      "start": 2609,
+      "end": 2623,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Buccinum variabile...,",
+      "name": "Buccinum variabile",
+      "odds": 30162571582.439693,
+      "start": 2686,
+      "end": 2708,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Murex fistulosus.......",
+      "name": "Murex fistulosus",
+      "odds": 549186.2639975611,
+      "start": 2714,
+      "end": 2737,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Aplysia depilans.......",
+      "name": "Aplysia depilans",
+      "odds": 1146684928.9987903,
+      "start": 2800,
+      "end": 2823,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Murex brandaris",
+      "name": "Murex brandaris",
+      "odds": 576690.8361928453,
+      "start": 2829,
+      "end": 2844,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ostrea plicatula......",
+      "name": "Ostrea plicatula",
+      "odds": 62069818170.66227,
+      "start": 2856,
+      "end": 2878,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "\\Natica pulchella",
+      "name": "Natica pulchella",
+      "odds": 12221975346.135502,
+      "start": 2886,
+      "end": 2903,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ophiura albida.",
+      "name": "Ophiura albida",
+      "odds": 301361864037.68616,
+      "start": 2969,
+      "end": 2984,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Holo-\nthuria tubulosa.",
+      "name": "Holothuria tubulosa",
+      "odds": 2300905259858.822,
+      "start": 2985,
+      "end": 3007,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Caryophyllia cyathus.",
+      "name": "Caryophyllia cyathus",
+      "odds": 56412288.42743143,
+      "start": 3008,
+      "end": 3029,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Crustacea.",
+      "name": "Crustacea",
+      "odds": 3151.406429570691,
+      "start": 3096,
+      "end": 3106,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cucumaria pentactes,",
+      "name": "Cucumaria pentactes",
+      "odds": 6485364826.373005,
+      "start": 3143,
+      "end": 3163,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Plants.—Zostera oceanica.",
+      "name": "Plants��zostera oceanica",
+      "odds": 459103.15764540667,
+      "start": 3182,
+      "end": 3207,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Caulerpa prolifera.",
+      "name": "Caulerpa prolifera",
+      "odds": 603251431648.7938,
+      "start": 3208,
+      "end": 3227,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Serpula.",
+      "name": "Serpula",
+      "odds": 38544.24860695794,
+      "start": 3243,
+      "end": 3251,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Dictyomenia volubilis.",
+      "name": "Dictyomenia volubilis",
+      "odds": 462180812969.7072,
+      "start": 3273,
+      "end": 3295,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Acetabularia.",
+      "name": "Acetabularia",
+      "odds": 235001.21773509853,
+      "start": 3296,
+      "end": 3309,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Crustacea.",
+      "name": "Crustacea",
+      "odds": 3151.406429570691,
+      "start": 3310,
+      "end": 3320,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hiatella arctica",
+      "name": "Hiatella arctica",
+      "odds": 13745138194108.678,
+      "start": 3727,
+      "end": 3743,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Natica",
+      "name": "Natica",
+      "odds": 852.0704185090011,
+      "start": 3815,
+      "end": 3821,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Chiton leevis...........",
+      "name": "Chiton leevis",
+      "odds": 14932.247655157867,
+      "start": 3854,
+      "end": 3878,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Trochus creuulatus...|",
+      "name": "Trochus creuulatus",
+      "odds": 18002141.961825546,
+      "start": 3951,
+      "end": 3973,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Modiola tulipa.........",
+      "name": "Modiola tulipa",
+      "odds": 2359667593.455703,
+      "start": 4008,
+      "end": 4031,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten polymorphus",
+      "name": "Pecten polymorphus",
+      "odds": 491233.100585503,
+      "start": 4061,
+      "end": 4079,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium vulgatum..|",
+      "name": "Cerithium vulgatum",
+      "odds": 3561841704278.048,
+      "start": 4091,
+      "end": 4112,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "'Cardium exiguum",
+      "name": "Cardium exiguum",
+      "odds": 18071146877.94025,
+      "start": 4264,
+      "end": 4280,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Columbella rustica...",
+      "name": "Columbella rustica",
+      "odds": 29969049821958.16,
+      "start": 4343,
+      "end": 4364,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nucula margaritacea.|",
+      "name": "Nucula margaritacea",
+      "odds": 214526602169.53027,
+      "start": 4369,
+      "end": 4390,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "||Fusus lignarius",
+      "name": "Fusus lignarius",
+      "odds": 30890338672.728294,
+      "start": 4450,
+      "end": 4467,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ligula boysii",
+      "name": "Ligula boysii",
+      "odds": 85980.2409697707,
+      "start": 4481,
+      "end": 4494,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lucina transversa",
+      "name": "Lucina transversa",
+      "odds": 70224.11345800907,
+      "start": 4544,
+      "end": 4561,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Pleurotoma",
+      "name": "Pleurotoma",
+      "odds": 187099.43841953372,
+      "start": 4708,
+      "end": 4718,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Eipsos pulchella",
+      "name": "Eipsos pulchella",
+      "odds": 5493.001873952018,
+      "start": 4817,
+      "end": 4833,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cerithium",
+      "name": "Cerithium",
+      "odds": 189011.9333878745,
+      "start": 4926,
+      "end": 4935,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Asterias.",
+      "name": "Asterias",
+      "odds": 212384.99183914877,
+      "start": 4955,
+      "end": 4964,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ophioderma lacertosa.",
+      "name": "Ophioderma lacertosa",
+      "odds": 4791848404830.644,
+      "start": 4967,
+      "end": 4988,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nerita viridis",
+      "name": "Nerita viridis",
+      "odds": 38769374487.23068,
+      "start": 4989,
+      "end": 5003,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Natica millepunctata.|",
+      "name": "Natica millepunctata",
+      "odds": 167893832962.74942,
+      "start": 5063,
+      "end": 5085,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Parthenia",
+      "name": "Parthenia",
+      "odds": 10762.732830147137,
+      "start": 5116,
+      "end": 5125,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Striatula",
+      "name": "Striatula",
+      "odds": 100529.60281396426,
+      "start": 5248,
+      "end": 5257,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ophioderma lacertosa,",
+      "name": "Ophioderma lacertosa",
+      "odds": 4791848404830.644,
+      "start": 5485,
+      "end": 5506,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Crustacea.",
+      "name": "Crustacea",
+      "odds": 3151.406429570691,
+      "start": 5549,
+      "end": 5559,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Avicula tarentina......",
+      "name": "Avicula tarentina",
+      "odds": 602139074138.1294,
+      "start": 5560,
+      "end": 5583,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hiatella arctica",
+      "name": "Hiatella arctica",
+      "odds": 13745138194108.678,
+      "start": 5599,
+      "end": 5615,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Modiola tulipa......",
+      "name": "Modiola tulipa",
+      "odds": 2359667593.455703,
+      "start": 6032,
+      "end": 6052,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Anomia ephippium",
+      "name": "Anomia ephippium",
+      "odds": 107396757260.68452,
+      "start": 6057,
+      "end": 6073,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten polymorphus",
+      "name": "Pecten polymorphus",
+      "odds": 491233.100585503,
+      "start": 6078,
+      "end": 6096,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cytherea apicalis......,",
+      "name": "Cytherea apicalis",
+      "odds": 2220418.8485272313,
+      "start": 6135,
+      "end": 6159,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardium exiguum.....",
+      "name": "Cardium exiguum",
+      "odds": 18071146877.94025,
+      "start": 6171,
+      "end": 6191,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardita trapezia......)",
+      "name": "Cardita trapezia",
+      "odds": 1139684545.3939824,
+      "start": 6239,
+      "end": 6262,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nucula emarginata...}",
+      "name": "Nucula emarginata",
+      "odds": 2243629853167.506,
+      "start": 6268,
+      "end": 6289,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Arca lactea",
+      "name": "Arca lactea",
+      "odds": 502751247.3103491,
+      "start": 6295,
+      "end": 6306,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "TEtraZONA",
+      "name": "Tetrazona",
+      "odds": 10476.242819560486,
+      "start": 6329,
+      "end": 6338,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ligula boysii",
+      "name": "Ligula boysii",
+      "odds": 85980.2409697707,
+      "start": 6375,
+      "end": 6388,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lucina spinifera",
+      "name": "Lucina spinifera",
+      "odds": 395487.12770181155,
+      "start": 6751,
+      "end": 6767,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pandora obtusa",
+      "name": "Pandora obtusa",
+      "odds": 21643019.192651432,
+      "start": 6816,
+      "end": 6830,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Astarte pusilla?",
+      "name": "Astarte pusilla",
+      "odds": 524126.3407008093,
+      "start": 6842,
+      "end": 6858,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ophiura texturata.",
+      "name": "Ophiura texturata",
+      "odds": 10144372391270.541,
+      "start": 6921,
+      "end": 6939,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Comatula mediterranea.",
+      "name": "Comatula mediterranea",
+      "odds": 564506194297.7164,
+      "start": 6940,
+      "end": 6962,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": ",Cardita",
+      "name": "Cardita",
+      "odds": 29212.483154747068,
+      "start": 7959,
+      "end": 7967,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardium papi",
+      "name": "Cardium papi",
+      "odds": 64475651.0381927,
+      "start": 8011,
+      "end": 8023,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Fusus",
+      "name": "Fusus",
+      "odds": 2824.7980396484077,
+      "start": 8054,
+      "end": 8059,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Nucula",
+      "name": "Nucula",
+      "odds": 19537.083368801235,
+      "start": 8224,
+      "end": 8230,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "[Trochus exiguus",
+      "name": "Trochus exiguus",
+      "odds": 10970516975.803846,
+      "start": 8248,
+      "end": 8264,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Turbo rugosus",
+      "name": "Turbo rugosus",
+      "odds": 3738714320.440884,
+      "start": 8289,
+      "end": 8302,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ven echinatum",
+      "name": "Ven echinatum",
+      "odds": 5.5531403885880435,
+      "start": 8513,
+      "end": 8526,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Echinocyamus,",
+      "name": "Echinocyamus",
+      "odds": 705003.6532052956,
+      "start": 8586,
+      "end": 8599,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cytherea venetiana...",
+      "name": "Cytherea venetiana",
+      "odds": 2014171.3337133005,
+      "start": 8612,
+      "end": 8633,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Crustacea",
+      "name": "Crustacea",
+      "odds": 3151.406429570691,
+      "start": 8645,
+      "end": 8654,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Codium tor",
+      "name": "Codium tor",
+      "odds": 3488280.2229420496,
+      "start": 8687,
+      "end": 8697,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Tellina donacina",
+      "name": "Tellina donacina",
+      "odds": 55653979481.60452,
+      "start": 8812,
+      "end": 8828,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Thracia pubescens",
+      "name": "Thracia pubescens",
+      "odds": 588079558914.2344,
+      "start": 8919,
+      "end": 8936,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Corbula nucleus",
+      "name": "Corbula nucleus",
+      "odds": 37818864.1553483,
+      "start": 9008,
+      "end": 9023,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Bolen coarctatus",
+      "name": "Bolen coarctatus",
+      "odds": 3718.7819659015913,
+      "start": 9198,
+      "end": 9214,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "PUSIO.",
+      "name": "Pusio",
+      "odds": 2658.633449080854,
+      "start": 9385,
+      "end": 9391,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cerithium",
+      "name": "Cerithium",
+      "odds": 189011.9333878745,
+      "start": 9408,
+      "end": 9417,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Conus mediterrancus,",
+      "name": "Conus mediterrancus",
+      "odds": 27075010.984415025,
+      "start": 9496,
+      "end": 9516,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Misa...",
+      "name": "Misa",
+      "odds": 1494.5332604889466,
+      "start": 9585,
+      "end": 9592,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Trochus",
+      "name": "Trochus",
+      "odds": 25139.588868748684,
+      "start": 9642,
+      "end": 9649,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Arca",
+      "name": "Arca",
+      "odds": 1195.626608391157,
+      "start": 9675,
+      "end": 9679,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 3,
+      "verbatim": "S2ioy  precebratula truncata",
+      "name": "S�ioy precebratula truncata",
+      "odds": 81019.06835032701,
+      "start": 9748,
+      "end": 9776,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Bulla hydatis",
+      "name": "Bulla hydatis",
+      "odds": 83122.24605657201,
+      "start": 9860,
+      "end": 9873,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Crania ringens.........",
+      "name": "Crania ringens",
+      "odds": 2738284072.0147686,
+      "start": 9942,
+      "end": 9965,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Bulimus acutus",
+      "name": "Bulimus acutus",
+      "odds": 1062768588128.9828,
+      "start": 9973,
+      "end": 9987,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Fusus lavatus",
+      "name": "Fusus lavatus",
+      "odds": 72024722546.8626,
+      "start": 10002,
+      "end": 10015,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pleurotoma miro",
+      "name": "Pleurotoma miro",
+      "odds": 166461336.96289676,
+      "start": 10153,
+      "end": 10168,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Columbella",
+      "name": "Columbella",
+      "odds": 2322371.779382462,
+      "start": 10240,
+      "end": 10250,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium lima",
+      "name": "Cerithium lima",
+      "odds": 4076304.939425169,
+      "start": 10273,
+      "end": 10287,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Triforis adversum",
+      "name": "Triforis adversum",
+      "odds": 513090713551.1285,
+      "start": 10496,
+      "end": 10513,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Mitra obsoleta",
+      "name": "Mitra obsoleta",
+      "odds": 59176.84229883278,
+      "start": 10519,
+      "end": 10533,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Murex cristatus",
+      "name": "Murex cristatus",
+      "odds": 1760198.1492751772,
+      "start": 10571,
+      "end": 10586,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Troclus fanulum",
+      "name": "Troclus fanulum",
+      "odds": 2967.2566940669913,
+      "start": 10588,
+      "end": 10603,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Turbo sangniueus",
+      "name": "Turbo sangniueus",
+      "odds": 69643.62731126195,
+      "start": 10604,
+      "end": 10620,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Turritella",
+      "name": "Turritella",
+      "odds": 2322371.779382462,
+      "start": 10621,
+      "end": 10631,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Natica valencieusii",
+      "name": "Natica valencieusii",
+      "odds": 150826.81527164386,
+      "start": 10646,
+      "end": 10665,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cyprzea europea",
+      "name": "Cyprzea europea",
+      "odds": 47.09931260423795,
+      "start": 10670,
+      "end": 10685,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Emarginula",
+      "name": "Emarginula",
+      "odds": 148120.38874879753,
+      "start": 10691,
+      "end": 10701,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Chiton rissoi",
+      "name": "Chiton rissoi",
+      "odds": 2036.215589339709,
+      "start": 10742,
+      "end": 10755,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Asterina,",
+      "name": "Asterina",
+      "odds": 9132.861120933094,
+      "start": 10900,
+      "end": 10909,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Echinus monilis,",
+      "name": "Echinus monilis",
+      "odds": 153941921.21318293,
+      "start": 10924,
+      "end": 10940,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cidaris histrix,",
+      "name": "Cidaris histrix",
+      "odds": 21549959390.61867,
+      "start": 10957,
+      "end": 10973,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Echinocyamus,",
+      "name": "Echinocyamus",
+      "odds": 705003.6532052956,
+      "start": 10992,
+      "end": 11005,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Myriapora truncata,",
+      "name": "Myriapora truncata",
+      "odds": 69296898611005.37,
+      "start": 11023,
+      "end": 11042,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Naxia.",
+      "name": "Naxia",
+      "odds": 15951.800694485126,
+      "start": 11198,
+      "end": 11204,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Terebratula truncata.}",
+      "name": "Terebratula truncata",
+      "odds": 11891229493964.674,
+      "start": 11368,
+      "end": 11390,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten varius",
+      "name": "Pecten varius",
+      "odds": 105086.9611852753,
+      "start": 11421,
+      "end": 11434,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lima elongata.........,",
+      "name": "Lima elongata",
+      "odds": 413162.1258219653,
+      "start": 11531,
+      "end": 11554,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Modiola",
+      "name": "Modiola",
+      "odds": 182578.0197171692,
+      "start": 11579,
+      "end": 11586,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hiatella arctica",
+      "name": "Hiatella arctica",
+      "odds": 13745138194108.678,
+      "start": 11624,
+      "end": 11640,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "M. barbata.",
+      "name": "M. barbata",
+      "odds": 17965040.2854013,
+      "start": 11656,
+      "end": 11667,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardita aculeata",
+      "name": "Cardita aculeata",
+      "odds": 1771283822866.6375,
+      "start": 11671,
+      "end": 11687,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Astarte incrassata?...|",
+      "name": "Astarte incrassata",
+      "odds": 9559500.714621838,
+      "start": 11700,
+      "end": 11723,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cytherea apicalis......",
+      "name": "Cytherea apicalis",
+      "odds": 2220418.8485272313,
+      "start": 11728,
+      "end": 11751,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Venus ovata......00008]",
+      "name": "Venus ovata",
+      "odds": 183927.68922003728,
+      "start": 11759,
+      "end": 11782,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Arca tetragona.........}",
+      "name": "Arca tetragona",
+      "odds": 1188606642.796417,
+      "start": 11788,
+      "end": 11812,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Murex cristatus,",
+      "name": "Murex cristatus",
+      "odds": 1760198.1492751772,
+      "start": 11859,
+      "end": 11875,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Pleurotoma",
+      "name": "Pleurotoma",
+      "odds": 187099.43841953372,
+      "start": 11888,
+      "end": 11898,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium lima",
+      "name": "Cerithium lima",
+      "odds": 4076304.939425169,
+      "start": 12033,
+      "end": 12047,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Trochus exiguus......)",
+      "name": "Trochus exiguus",
+      "odds": 10970516975.803846,
+      "start": 12066,
+      "end": 12088,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Phasianella pulla......",
+      "name": "Phasianella pulla",
+      "odds": 3035338702634.4067,
+      "start": 12095,
+      "end": 12118,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Rissoa reticulata......)",
+      "name": "Rissoa reticulata",
+      "odds": 4845463.828602626,
+      "start": 12124,
+      "end": 12148,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Turbo rugosus......",
+      "name": "Turbo rugosus",
+      "odds": 3738714320.440884,
+      "start": 12193,
+      "end": 12212,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Natica",
+      "name": "Natica",
+      "odds": 852.0704185090011,
+      "start": 12221,
+      "end": 12227,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Tornatella fasciata",
+      "name": "Tornatella fasciata",
+      "odds": 140815812942409.88,
+      "start": 12263,
+      "end": 12282,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Emarginula elongata.",
+      "name": "Emarginula elongata",
+      "odds": 8981203242382.639,
+      "start": 12287,
+      "end": 12307,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cleodora pyramidata",
+      "name": "Cleodora pyramidata",
+      "odds": 88691624688555.16,
+      "start": 12353,
+      "end": 12372,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Radiata.—Echinus monilis",
+      "name": "Radiata��echinus monilis",
+      "odds": 109744.92310595517,
+      "start": 12493,
+      "end": 12517,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Echinocyamus\n\n \n\npusillus.",
+      "name": "Echinocyamus pusillus",
+      "odds": 7227843618447.944,
+      "start": 12522,
+      "end": 12548,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cidaris.",
+      "name": "Cidaris",
+      "odds": 43210.13133306337,
+      "start": 12560,
+      "end": 12568,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Terebratula truncata.|",
+      "name": "Terebratula truncata",
+      "odds": 11891229493964.674,
+      "start": 12800,
+      "end": 12822,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lima elongata...",
+      "name": "Lima elongata",
+      "odds": 413162.1258219653,
+      "start": 12927,
+      "end": 12943,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Modiola",
+      "name": "Modiola",
+      "odds": 182578.0197171692,
+      "start": 12994,
+      "end": 13001,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten teste",
+      "name": "Pecten teste",
+      "odds": 412.3876773377526,
+      "start": 13035,
+      "end": 13047,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardita squamosa",
+      "name": "Cardita squamosa",
+      "odds": 653178736612.657,
+      "start": 13130,
+      "end": 13146,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "\\Cytherea apicalis...,..|",
+      "name": "Cytherea apicalis",
+      "odds": 2220418.8485272313,
+      "start": 13157,
+      "end": 13182,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Venns ovata",
+      "name": "Venns ovata",
+      "odds": 1669.348729308702,
+      "start": 13188,
+      "end": 13199,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Astarte pusilla.........",
+      "name": "Astarte pusilla",
+      "odds": 524126.3407008093,
+      "start": 13217,
+      "end": 13241,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lucina commutata...!",
+      "name": "Lucina commutata",
+      "odds": 3721174.3379215905,
+      "start": 13252,
+      "end": 13272,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Arca lactea",
+      "name": "Arca lactea",
+      "odds": 502751247.3103491,
+      "start": 13306,
+      "end": 13317,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pleurotoma crispata..)",
+      "name": "Pleurotoma crispata",
+      "odds": 11344677779851.752,
+      "start": 13341,
+      "end": 13363,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "(Fusus muricatus",
+      "name": "Fusus muricatus",
+      "odds": 164079850872.02432,
+      "start": 13497,
+      "end": 13513,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "‘Triforis perversum....",
+      "name": "Triforis perversum",
+      "odds": 746295142335.2123,
+      "start": 13525,
+      "end": 13548,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "‘Turritella",
+      "name": "Turritella",
+      "odds": 2322371.779382462,
+      "start": 13582,
+      "end": 13593,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Trochus exiguus",
+      "name": "Trochus exiguus",
+      "odds": 10970516975.803846,
+      "start": 13613,
+      "end": 13628,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Turbo sanguineus",
+      "name": "Turbo sanguineus",
+      "odds": 7355946462.045786,
+      "start": 13642,
+      "end": 13658,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Rissoa reticulata",
+      "name": "Rissoa reticulata",
+      "odds": 4845463.828602626,
+      "start": 13667,
+      "end": 13684,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "‘Marginella",
+      "name": "Marginella",
+      "odds": 2322371.779382462,
+      "start": 13697,
+      "end": 13708,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Tornatella pusilla",
+      "name": "Tornatella pusilla",
+      "odds": 14622579864820.164,
+      "start": 13725,
+      "end": 13743,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Fissurella greca",
+      "name": "Fissurella greca",
+      "odds": 90793245498.61671,
+      "start": 13815,
+      "end": 13831,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Echinocyamus,",
+      "name": "Echinocyamus",
+      "odds": 705003.6532052956,
+      "start": 13882,
+      "end": 13895,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Echinus monilis,",
+      "name": "Echinus monilis",
+      "odds": 153941921.21318293,
+      "start": 13911,
+      "end": 13927,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Caryophyllia.",
+      "name": "Caryophyllia",
+      "odds": 120552.57273423887,
+      "start": 13976,
+      "end": 13989,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Crustacea.",
+      "name": "Crustacea",
+      "odds": 3151.406429570691,
+      "start": 14009,
+      "end": 14019,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "‘Lima crassa",
+      "name": "Lima crassa",
+      "odds": 4408.0351661130335,
+      "start": 14443,
+      "end": 14455,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nucula polii...........",
+      "name": "Nucula polii",
+      "odds": 10693246065.636683,
+      "start": 14537,
+      "end": 14560,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "|Area lactea",
+      "name": "Area lactea",
+      "odds": 2865.222857973472,
+      "start": 14632,
+      "end": 14644,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nezra costellata......",
+      "name": "Nezra costellata",
+      "odds": 31585.3102446246,
+      "start": 14756,
+      "end": 14778,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "\\Hiatella",
+      "name": "Hiatella",
+      "odds": 1065142.9136175492,
+      "start": 14813,
+      "end": 14822,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "\\Pandora obtusa",
+      "name": "Pandora obtusa",
+      "odds": 21643019.192651432,
+      "start": 14863,
+      "end": 14878,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Terebratula vitrea",
+      "name": "Terebratula vitrea",
+      "odds": 13433058057.975292,
+      "start": 14892,
+      "end": 14910,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Russa",
+      "name": "Russa",
+      "odds": 7532.794772395754,
+      "start": 15091,
+      "end": 15096,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Crania ringens.........",
+      "name": "Crania ringens",
+      "odds": 2738284072.0147686,
+      "start": 15169,
+      "end": 15192,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lima elongata.........",
+      "name": "Lima elongata",
+      "odds": 413162.1258219653,
+      "start": 15240,
+      "end": 15262,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Parthenia veutricosa",
+      "name": "Parthenia veutricosa",
+      "odds": 4315198.172202095,
+      "start": 15276,
+      "end": 15296,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Spondylus gussonii...)",
+      "name": "Spondylus gussonii",
+      "odds": 714952944.0312645,
+      "start": 15436,
+      "end": 15458,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ladas planorboides.../",
+      "name": "Ladas planorboides",
+      "odds": 3215183599.377793,
+      "start": 15466,
+      "end": 15488,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 3,
+      "verbatim": "Arca lactea rio7",
+      "name": "Arca lactea rio",
+      "odds": 270626437531.7677,
+      "start": 15491,
+      "end": 15507,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Limacina minuta",
+      "name": "Limacina minuta",
+      "odds": 7385180173.49615,
+      "start": 15511,
+      "end": 15526,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hyalea gibbosa",
+      "name": "Hyalea gibbosa",
+      "odds": 431578522937.71375,
+      "start": 15544,
+      "end": 15558,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cleodora pyramidata.",
+      "name": "Cleodora pyramidata",
+      "odds": 88691624688555.16,
+      "start": 15626,
+      "end": 15646,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Criseis?...",
+      "name": "Criseis",
+      "odds": 40167.16433777722,
+      "start": 15687,
+      "end": 15698,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pleurotoma crispata..|",
+      "name": "Pleurotoma crispata",
+      "odds": 11344677779851.752,
+      "start": 15718,
+      "end": 15740,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Annelides.—Ditrapa subulata",
+      "name": "Annelides��ditrapa subulata",
+      "odds": 68865.47364681099,
+      "start": 15766,
+      "end": 15793,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Annelides.—Ditrupa subulata",
+      "name": "Annelides��ditrupa subulata",
+      "odds": 68865.47364681099,
+      "start": 15816,
+      "end": 15843,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cidaris.",
+      "name": "Cidaris",
+      "odds": 43210.13133306337,
+      "start": 16010,
+      "end": 16018,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium lima",
+      "name": "Cerithium lima",
+      "odds": 4076304.939425169,
+      "start": 16019,
+      "end": 16033,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Trochus tinei",
+      "name": "Trochus tinei",
+      "odds": 3439917370.0583587,
+      "start": 16046,
+      "end": 16059,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Turbo sanguineus",
+      "name": "Turbo sanguineus",
+      "odds": 7355946462.045786,
+      "start": 16161,
+      "end": 16177,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Rissoa reticulata",
+      "name": "Rissoa reticulata",
+      "odds": 4845463.828602626,
+      "start": 16250,
+      "end": 16267,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Emargiuula elongata.)",
+      "name": "Emargiuula elongata",
+      "odds": 176042.94559364248,
+      "start": 16338,
+      "end": 16359,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Atlanta peronii",
+      "name": "Atlanta peronii",
+      "odds": 633103.1046088985,
+      "start": 16546,
+      "end": 16561,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hyalea gibbosa",
+      "name": "Hyalea gibbosa",
+      "odds": 431578522937.71375,
+      "start": 16597,
+      "end": 16611,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Anomia polymorpha.",
+      "name": "Anomia polymorpha",
+      "odds": 27968971908.288403,
+      "start": 16641,
+      "end": 16659,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lima elongata.........",
+      "name": "Lima elongata",
+      "odds": 413162.1258219653,
+      "start": 16731,
+      "end": 16753,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Criseis clava",
+      "name": "Criseis clava",
+      "odds": 2748090412.951649,
+      "start": 16774,
+      "end": 16787,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten similis",
+      "name": "Pecten similis",
+      "odds": 407705.3933939432,
+      "start": 16880,
+      "end": 16894,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pectinura vestita,",
+      "name": "Pectinura vestita",
+      "odds": 392747656362.972,
+      "start": 16953,
+      "end": 16971,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Echinocyamus,",
+      "name": "Echinocyamus",
+      "odds": 705003.6532052956,
+      "start": 16983,
+      "end": 16996,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cidaris,",
+      "name": "Cidaris",
+      "odds": 43210.13133306337,
+      "start": 17047,
+      "end": 17055,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nucula polii...........",
+      "name": "Nucula polii",
+      "odds": 10693246065.636683,
+      "start": 17076,
+      "end": 17099,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "‘Arca tetragona",
+      "name": "Arca tetragona",
+      "odds": 1188606642.796417,
+      "start": 17156,
+      "end": 17171,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Serpula.",
+      "name": "Serpula",
+      "odds": 38544.24860695794,
+      "start": 17204,
+      "end": 17212,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Balanus.)",
+      "name": "Balanus",
+      "odds": 219093.623660603,
+      "start": 17227,
+      "end": 17236,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Foraminifera.",
+      "name": "Foraminifera",
+      "odds": 15434.373965307821,
+      "start": 17274,
+      "end": 17287,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "|Cardium minimum...)",
+      "name": "Cardium minimum",
+      "odds": 4375728.561505762,
+      "start": 17288,
+      "end": 17308,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Kellia abyssicola......",
+      "name": "Kellia abyssicola",
+      "odds": 104296883007.65588,
+      "start": 17317,
+      "end": 17340,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Neera costellata..",
+      "name": "Neera costellata",
+      "odds": 2222023947918.908,
+      "start": 17423,
+      "end": 17441,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Cerigo.",
+      "name": "Cerigo",
+      "odds": 1850.8815823074851,
+      "start": 17477,
+      "end": 17484,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Murex vaginatus......",
+      "name": "Murex vaginatus",
+      "odds": 1760198.1492751772,
+      "start": 17572,
+      "end": 17593,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium lima",
+      "name": "Cerithium lima",
+      "odds": 4076304.939425169,
+      "start": 17649,
+      "end": 17663,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Parthenia yentricosa",
+      "name": "Parthenia yentricosa",
+      "odds": 4315198.172202095,
+      "start": 17814,
+      "end": 17834,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Eulima subulata",
+      "name": "Eulima subulata",
+      "odds": 224454496895.46866,
+      "start": 17883,
+      "end": 17898,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Bulla utriculus",
+      "name": "Bulla utriculus",
+      "odds": 451884.6104496176,
+      "start": 18021,
+      "end": 18036,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lima elongata.........|",
+      "name": "Lima elongata",
+      "odds": 413162.1258219653,
+      "start": 18046,
+      "end": 18069,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Carinaria",
+      "name": "Carinaria",
+      "odds": 69841.6187970699,
+      "start": 18081,
+      "end": 18090,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Atlanta peronii",
+      "name": "Atlanta peronii",
+      "odds": 633103.1046088985,
+      "start": 18197,
+      "end": 18212,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Limacina",
+      "name": "Limacina",
+      "odds": 9132.861120933094,
+      "start": 18225,
+      "end": 18233,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hyalea gibbosa",
+      "name": "Hyalea gibbosa",
+      "odds": 431578522937.71375,
+      "start": 18248,
+      "end": 18262,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Criseis clava",
+      "name": "Criseis clava",
+      "odds": 2748090412.951649,
+      "start": 18296,
+      "end": 18309,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Serpula,",
+      "name": "Serpula",
+      "odds": 38544.24860695794,
+      "start": 18385,
+      "end": 18393,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Idmonea",
+      "name": "Idmonea",
+      "odds": 58424.966309494135,
+      "start": 18431,
+      "end": 18438,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ophiura abyssicola,",
+      "name": "Ophiura abyssicola",
+      "odds": 1722955023780.182,
+      "start": 18461,
+      "end": 18480,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Brissus.",
+      "name": "Brissus",
+      "odds": 7759.56583797969,
+      "start": 18503,
+      "end": 18511,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ditrupa pusilla,",
+      "name": "Ditrupa pusilla",
+      "odds": 22991682025.906536,
+      "start": 18512,
+      "end": 18528,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Crustacea.",
+      "name": "Crustacea",
+      "odds": 3151.406429570691,
+      "start": 18550,
+      "end": 18560,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten similis",
+      "name": "Pecten similis",
+      "odds": 407705.3933939432,
+      "start": 18707,
+      "end": 18721,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lima elongata.........",
+      "name": "Lima elongata",
+      "odds": 413162.1258219653,
+      "start": 18818,
+      "end": 18840,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Arca lactea",
+      "name": "Arca lactea",
+      "odds": 502751247.3103491,
+      "start": 18886,
+      "end": 18897,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Poromya anatinoides",
+      "name": "Poromya anatinoides",
+      "odds": 67060903551.47556,
+      "start": 18945,
+      "end": 18964,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Kellia abyssicola......",
+      "name": "Kellia abyssicola",
+      "odds": 104296883007.65588,
+      "start": 18979,
+      "end": 19002,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Negra cuspidata......",
+      "name": "Negra cuspidata",
+      "odds": 24256.593402634997,
+      "start": 19020,
+      "end": 19041,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cardita squamosa",
+      "name": "Cardita squamosa",
+      "odds": 653178736612.657,
+      "start": 19136,
+      "end": 19152,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ligula profundissima.|",
+      "name": "Ligula profundissima",
+      "odds": 535514.855285739,
+      "start": 19178,
+      "end": 19200,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Crania ringens",
+      "name": "Crania ringens",
+      "odds": 2738284072.0147686,
+      "start": 19209,
+      "end": 19223,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Terebratula",
+      "name": "Terebratula",
+      "odds": 196113.31442043476,
+      "start": 19235,
+      "end": 19246,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Murex vaginatus......|",
+      "name": "Murex vaginatus",
+      "odds": 1760198.1492751772,
+      "start": 19275,
+      "end": 19297,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Marginella",
+      "name": "Marginella",
+      "odds": 2322371.779382462,
+      "start": 19361,
+      "end": 19371,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Rissoa reticulata",
+      "name": "Rissoa reticulata",
+      "odds": 4845463.828602626,
+      "start": 19399,
+      "end": 19416,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Parthenia ventricosa.|",
+      "name": "Parthenia ventricosa",
+      "odds": 455782789514.518,
+      "start": 19452,
+      "end": 19474,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cerithium lima",
+      "name": "Cerithium lima",
+      "odds": 4076304.939425169,
+      "start": 19485,
+      "end": 19499,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Lottia unicolor",
+      "name": "Lottia unicolor",
+      "odds": 167648111878.71423,
+      "start": 19523,
+      "end": 19538,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Scissurella plicata",
+      "name": "Scissurella plicata",
+      "odds": 119038231136084.6,
+      "start": 19553,
+      "end": 19572,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Peracle physoides....}0",
+      "name": "Peracle physoides",
+      "odds": 3891414457.3294487,
+      "start": 19585,
+      "end": 19608,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Hyalea gibbosa",
+      "name": "Hyalea gibbosa",
+      "odds": 431578522937.71375,
+      "start": 19613,
+      "end": 19627,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cleodora pyramidata.’",
+      "name": "Cleodora pyramidata",
+      "odds": 88691624688555.16,
+      "start": 19691,
+      "end": 19712,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Criseis,",
+      "name": "Criseis",
+      "odds": 40167.16433777722,
+      "start": 19899,
+      "end": 19907,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Pecten concentricus..|",
+      "name": "Pecten concentricus",
+      "odds": 1414953.0168933491,
+      "start": 20210,
+      "end": 20232,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Arca imbricata.........",
+      "name": "Arca imbricata",
+      "odds": 105446389310.93927,
+      "start": 20302,
+      "end": 20325,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nucula striata.........",
+      "name": "Nucula striata",
+      "odds": 756348957630.3486,
+      "start": 20334,
+      "end": 20357,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Kellia abyssicola",
+      "name": "Kellia abyssicola",
+      "odds": 104296883007.65588,
+      "start": 20397,
+      "end": 20414,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Nezra cuspidata......",
+      "name": "Nezra cuspidata",
+      "odds": 24256.593402634997,
+      "start": 20431,
+      "end": 20452,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Ligula profundissima.|",
+      "name": "Ligula profundissima",
+      "odds": 535514.855285739,
+      "start": 20545,
+      "end": 20567,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "\\Nassa intermedia,",
+      "name": "Nassa intermedia",
+      "odds": 15323172853.222546,
+      "start": 20611,
+      "end": 20629,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Medi-\n‘Rissoa reticulata......;",
+      "name": "Medi-�rissoa reticulata",
+      "odds": 1565145.0205924567,
+      "start": 20675,
+      "end": 20706,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "[Marginella",
+      "name": "Marginella",
+      "odds": 2322371.779382462,
+      "start": 20753,
+      "end": 20764,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "\\Cleodora pyramidata",
+      "name": "Cleodora pyramidata",
+      "odds": 88691624688555.16,
+      "start": 20893,
+      "end": 20913,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "\\Criseis",
+      "name": "Criseis",
+      "odds": 40167.16433777722,
+      "start": 20920,
+      "end": 20928,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Limacina minuta....).",
+      "name": "Limacina minuta",
+      "odds": 7385180173.49615,
+      "start": 21018,
+      "end": 21039,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "\\Carinaria",
+      "name": "Carinaria",
+      "odds": 69841.6187970699,
+      "start": 21055,
+      "end": 21065,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "\\Peracle physoides[nea,",
+      "name": "Peracle physoides�nea",
+      "odds": 620580.948079904,
+      "start": 21082,
+      "end": 21105,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Foraminifera.",
+      "name": "Foraminifera",
+      "odds": 15434.373965307821,
+      "start": 21142,
+      "end": 21155,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Amphiura",
+      "name": "Amphiura",
+      "odds": 202731.12857373295,
+      "start": 21216,
+      "end": 21224,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Terebratula vitrea",
+      "name": "Terebratula vitrea",
+      "odds": 13433058057.975292,
+      "start": 21532,
+      "end": 21550,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "——|Hyalea gibbosa",
+      "name": "Hyalea gibbosa",
+      "odds": 431578522937.71375,
+      "start": 21636,
+      "end": 21653,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 2,
+      "verbatim": "Cleodora pyramidata.|",
+      "name": "Cleodora pyramidata",
+      "odds": 88691624688555.16,
+      "start": 21667,
+      "end": 21688,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Serpula,",
+      "name": "Serpula",
+      "odds": 38544.24860695794,
+      "start": 21737,
+      "end": 21745,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Terebratula",
+      "name": "Terebratula",
+      "odds": 196113.31442043476,
+      "start": 21847,
+      "end": 21858,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    },
+    {
+      "cardinality": 1,
+      "verbatim": "Lobatula.",
+      "name": "Lobatula",
+      "odds": 67934.59334922268,
+      "start": 21921,
+      "end": 21930,
+      "annotationNomenType": "NO_ANNOT",
+      "annotation": ""
+    }
+  ]
+}
