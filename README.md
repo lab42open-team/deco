@@ -143,6 +143,10 @@ more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | 
 
 The goal in this workflow is to reach to Aphia Ids for organisms mentioned in historical data. The `gnfinder` and `EXTRACT` tools return scientific names and NCBI ids, respectively.
 
+For organism names the GET request URL is `https://www.marinespecies.org/rest/AphiaRecordsByName/Nebalia?like=true&marine_only=false&offset=1` for the genus Nebalia.
+
+For NCBI ids the GET request URL is `https://www.marinespecies.org/rest/AphiaRecordByExternalID/7568?type=ncbi` for NCBI:7568.
+
 ## Tool performance evaluation
 
 Using standard methodology for evaluation the results from each tool can be classified with the following conditions by comparing them withe manual curated spreadsheet.
