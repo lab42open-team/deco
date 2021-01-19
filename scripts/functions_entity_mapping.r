@@ -116,11 +116,11 @@ get_AphiaIDs_gnfinder <- function(vector_ids) {
                     
                     worms_content[[l]] <- lapply(worms_content[[l]], list_null)
                     
-                    row_result[l,j] <- worms_content[[l]][[j]]
+                    row_result[l,j] <- as.character(worms_content[[l]][[j]])
 
                 } else {
 
-                    row_result[l,j] <- worms_content
+                    row_result[l,j] <- as.character(worms_content)
                 }
             }
             ## not to overload the Worms server
