@@ -19,6 +19,7 @@
 
 args <- commandArgs(trailingOnly=TRUE)
 random_id <- args[1]
+directory <- args[2]
 
 # Packages
 library(tidyverse)
@@ -28,14 +29,14 @@ library(httr)
 source("scripts/functions_entity_mapping.r")
 
 ## Input
-extract_file <- read_delim(paste("output/",random_id,"-extract.tsv",sep=""), delim="\t",col_names=T) %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
+extract_file <- read_delim(paste(directory,"/",random_id,"-extract.tsv",sep=""), delim="\t",col_names=T) %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
 
-gnfinder <- read_delim(paste("output/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F)
+gnfinder <- read_delim(paste(directory,"/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F)
 
 ## Output of NCBI to worms id
 extract_aphia_ids <- get_AphiaIDs_extract(extract_file$ncbi_id)
 
-write_delim(extract_aphia_ids, paste("output/",random_id,"-extract_organisms_worms.tsv",sep=""), delim="\t", col_names=T)
+write_delim(extract_aphia_ids, paste(directory,"/",random_id,"-extract_organisms_worms.tsv",sep=""), delim="\t", col_names=T)
 
 ## Output of worms id from scientific names
 
@@ -43,4 +44,6 @@ gnfinder_names_url <- gsub(gnfinder$X1, pattern=" ", replacement="%20")
 
 gnfinder_aphia_ids <- get_AphiaIDs_gnfinder(gnfinder_names_url)
 
-write_delim(gnfinder_aphia_ids, paste("output/",random_id,"-gnfinder_organisms_worms.tsv", sep=""), delim="\t", col_names=T)
+write_delim(gnfinder_aphia_ids, paste(directory,"/",random_id,"-gnfinder_organisms_worms.tsv", sep=""), delim="\t", col_names=T)
+
+# End of script
