@@ -94,9 +94,13 @@ echo -e "text from $pdf_file is in $directory/$text_output \n"
 
 #### EXTRACT
 
+echo -e "Now executing EXTRACT tool to detect organisms, environments and tissues. API is invoked, be sure to have a stable internet connection."
+
 ../scripts/getEntities_EXTRACT_api.pl $text_output > ${id}-extract.tsv
 
 #### gnfinder
+
+echo -e "Now executing gnfinder tool to detect organisms..."
 
 gnfinder find $text_output > ${id}-gnfinder.json
 
@@ -104,6 +108,9 @@ more ${id}-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 
 
 ## Entity mapping
 
+echo -e "Now performing Entity Mapping of organisms to Aphia Ids... API is invoked, be sure to have a stable internet connection."
+
 Rscript "../scripts/entity_mapping.r" "$id"
- 
+echo -e "Finished!"
+
 ## end of script
