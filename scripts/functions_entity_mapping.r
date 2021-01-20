@@ -79,7 +79,7 @@ get_AphiaIDs_extract <- function(vector_ids) {
             }
         }
         ## not to overload the Worms server
-        Sys.sleep(0.5)
+        Sys.sleep(sample(c(0.5,0.6,0.7,0.75), 1))
     }
     
     return(worms_df)
@@ -123,7 +123,7 @@ get_AphiaIDs_gnfinder <- function(vector_ids) {
         }
 
         worms_df <- bind_rows(row_result, worms_df)
-        Sys.sleep(0.5)
+        Sys.sleep(sample(c(0.5,0.6,0.7,0.75), 1))
     }
 
     colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id","tool")
