@@ -40,13 +40,13 @@ NOTE: All the following code was tested on a mac with 8gb RAM and Intel(R) Core(
 * ImageMagick version: 7.0.10-30
 * jq version: 1.6
 * tidyverse R package suite version: 1.3.0
+* httr R package version: 1.4.2
 
 ### Workflow Tools
 
 * Tesseract OCR version: 4.1.1
 * gnfinder version: v0.11.1
 * EXTRACT version: 2
-* taxize R package version: 0.9.99
 
 ## Running instructions
 
