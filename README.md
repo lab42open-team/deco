@@ -163,6 +163,10 @@ Using standard methodology for evaluation the results from each tool can be clas
 * process at the paragraph level to retrieve co-occurrencies of organisms and environments
 * further optimize the output in [Darwin Core format](https://dwc.tdwg.org)
 
+## Citation
+
+Georgia Sarafidou (HCMR), Savvas Paragkamian (HCMR), Vasilis Gerovasileiou (HCMR), Evangelos Pafilis (HCMR), Dimitra Mavraki (HCMR), Christina Pavloudi (HCMR), Christos Arvanitidis (HCMR / LifeWatch ERIC), Joana Beja (VLIZ), Menashè Eliezer (OGS), Marina Lipizer (OGS), Laura Boicenco (NIMRD). Scientific document on the design of the workflow of text mining technologies in data archaeology. EMODnet - WP3- Data archaeology. 07/12/2020.
+
 ## Licence
 
 All code provided here holds the 2-Clause BSD License.
