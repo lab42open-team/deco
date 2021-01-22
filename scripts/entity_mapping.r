@@ -29,7 +29,7 @@ library(httr)
 source("scripts/functions_entity_mapping.r")
 
 ## Input
-extract_file <- read_delim(paste(directory,"/",random_id,"-extract.tsv",sep=""), delim="\t",col_names=T) %>% filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
+extract_file <- read_delim(paste(directory,"/",random_id,"-extract.tsv",sep=""), delim="\t",col_names=T) %>% dplyr::filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
 
 gnfinder <- read_delim(paste(directory,"/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F)
 

@@ -31,9 +31,11 @@ library(jsonlite)
 # Data input
 
 ## Manual curation
-manual_ipt<-readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls") %>% select(scientificName, fieldNumber, catalogNumber, occurrenceID) %>% distinct()
+manual_ipt <- readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls", col_names=T) %>% select(scientificName,scientificNameID, fieldNumber, catalogNumber, occurrenceID) %>% distinct() %>% mutate(aphia_id=gsub(scientificNameID,pattern="urn:lsid:marinespecies.org:taxname:",replace=""))
 
 manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% filter(grepl(x=scientificName, pattern='\\w \\w'))
+
+manual_ipt_aphia_id <- manual_ipt %>% distinct(aphia_id)
 
 ## NER and Entity Mapping files load
 
@@ -54,6 +56,10 @@ gnfinder_organisms_worms <- read_delim(paste("../",directory,"/",random_id,"-gnf
 
 # Recall
 
+## Recall with aphia Ids from Worms
+
+
+
 ## Recall in species
 recall_species <- manual_ipt_species %>% mutate(gnfinder=as.numeric(scientificName %in% gnfinder_vector$name)) %>% mutate(extract_species=as.numeric(scientificName %in% extract_organisms$tagged_text))
 
@@ -63,10 +69,12 @@ recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_specie
 
 # Precision
 
+## Precision with Aphia Ids
+
 ## Precision in species
 precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
 
-precision_extract_species <- extract_organisms$tagged_text %>% mutate(scientificName=(tagged_text %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
+precision_extract_species <- extract_organisms %>% distinct(tagged_text) %>% mutate(scientificName=(tagged_text %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
 
 
 # Steps to get the names of species from NCBI ids using ftp download files from NCBI. Attention for big files >818M.
