@@ -19,32 +19,38 @@
 
 args <- commandArgs(trailingOnly=TRUE)
 random_id <- args[1]
-directory <- args[2]
+random_id <- 16272
 
-## packages
+directory <- args[2]
+directory <- "output"
+
+# packages
 library(tidyverse)
 library(jsonlite)
 
+# Data input
 
 ## Manual curation
 manual_ipt<-readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls") %>% select(scientificName, fieldNumber, catalogNumber, occurrenceID) %>% distinct()
 
-## NER
+manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% filter(grepl(x=scientificName, pattern='\\w \\w'))
 
-extract_associations <- read_delim("../output/30815-extract.tsv",delim="\t")
+## NER and Entity Mapping files load
+
+### EXTRACT
+extract_associations <- read_delim(paste("../",directory,"/",random_id,"-extract.tsv",sep=""),delim="\t")
 
 extract_organisms <- extract_associations %>% filter(entity_type==-2) %>% distinct()
+extract_organisms_worms <- read_delim(paste("../",directory,"/",random_id,"-extract_organisms_worms.tsv",sep=""),delim="\t")
 
-gnfinder_organisms <- jsonlite::read_json("../output/30815-gnfinder.json",simplifyVector = TRUE)
+### gnfinder
+gnfinder_organisms <- jsonlite::read_json(paste("../",directory,"/",random_id,"-gnfinder.json",sep=""),simplifyVector = TRUE)
 
 gnfinder_vector <- as_tibble(unique(gnfinder_organisms[[2]][3]))
 
 gnfinder_species_vector <- gnfinder_vector %>% filter(grepl(x=name, pattern='\\w \\w'))
 
-manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% filter(grepl(x=scientificName, pattern='\\w \\w'))
-
-## Entity Mapping
-#get_wormsid
+gnfinder_organisms_worms <- read_delim(paste("../",directory,"/",random_id,"-gnfinder_organisms_worms.tsv",sep=""),delim="\t")
 
 # Recall
 
