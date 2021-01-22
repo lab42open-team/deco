@@ -54,6 +54,7 @@ gnfinder_organisms_worms <- read_delim(paste("../",directory,"/",random_id,"-gnf
 
 # Recall
 
+## Recall in species
 recall_species <- manual_ipt_species %>% mutate(gnfinder=as.numeric(scientificName %in% gnfinder_vector$name)) %>% mutate(extract_species=as.numeric(scientificName %in% extract_organisms$tagged_text))
 
 recall_species_gnfinder <- sum(recall_species$gnfinder)/(sum(recall_species$gnfinder)+nrow(filter(recall_species, gnfinder==0)))
@@ -62,7 +63,10 @@ recall_species_extract <- sum(recall_species$extract_species)/(sum(recall_specie
 
 # Precision
 
+## Precision in species
 precision_gnfinder_species <- gnfinder_species_vector %>% mutate(scientificName=(name %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
+
+precision_extract_species <- extract_organisms$tagged_text %>% mutate(scientificName=(tagged_text %in% manual_ipt_species$scientificName)) %>% group_by(scientificName) %>% summarise(precision=n()) %>% pivot_wider(names_from=scientificName,values_from=precision) %>% mutate(precision=`TRUE`/(`TRUE`+`FALSE`))
 
 
 # Steps to get the names of species from NCBI ids using ftp download files from NCBI. Attention for big files >818M.
