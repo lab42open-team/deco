@@ -1,10 +1,30 @@
-#!/usr/bin/env Rscript
+##!/usr/bin/env Rscript
 
+# Name:     tool performance script of the cli-workflow
+#
+# Purpose:  Demonstration of a Command Line Interface workflow for biodiversity data rescue. Starting from OCR and going to NER and Entity Mapping this workflow is extentable to other tools and scalable to big libraries with biodiversity scanned documents
+#
+# Input:    Random id, the outputs of the EXTRACT and gnfinder tools and the results of the cli-workflow. In order to perform the evaluation the manual cutation file is needed as well to compare.
+# 
+# Output:   one file with the results.
+#
+# Author:   Savvas Paragkamian (s.paragkamian@hcmr.gr)
+#           Institute of Marine Biology Biotechnology and Aquaculture (IMBBC)
+#           Hellenic Centre for Marine Research (HCMR)
+#
+# Created:  12/01/2021
+# License:  2-clause BSD License
+
+## user arguments
+
+args <- commandArgs(trailingOnly=TRUE)
+random_id <- args[1]
+directory <- args[2]
+
+## packages
 library(tidyverse)
-library(ROCR)
 library(jsonlite)
-library(taxize)
-library(worrms)
+
 
 ## Manual curation
 manual_ipt<-readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls") %>% select(scientificName, fieldNumber, catalogNumber, occurrenceID) %>% distinct()
