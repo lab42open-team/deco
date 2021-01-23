@@ -23,9 +23,20 @@ Note that not all tools that appear in Figure 1 are included in this workflow.
 * `output` contains the output of the workflow tools
 * `gui-tools-screenshoots/` some screenshoots of the tools that are used in the report and are mentioned in **Figure 1**
 
-## Prerequisites
+## Testing
 
-NOTE: All the following code was tested on a mac with 8gb RAM and Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz running macOS Catalina 10.15.7.
+The workflow was tested on these machines/platforms:
+
+* macbook pro with 8gb RAM and Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz running macOS Catalina 10.15.7.
+* Hewlett-Packard Compaq Presario laptop with 4gb RAM and Intel(R) Pentium(R) Dual-Core CPU T4200 @ 2.00GHz running Linux Ubuntu 18.04.5 LTS (Bionic Beaver)
+
+
+| OS | CPU | RAM | Elapsed time |
+| :----:       |    :----:   |    :----:   |    :----:   |
+| macOS Catalina 10.15.7 | Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz | 8gb | 28 minutes |
+| Linux Ubuntu 18.04.5 LTS (Bionic Beaver) | Intel(R) Pentium(R) Dual-Core CPU T4200 @ 2.00GHz | 4gb | 32 minutes |
+
+## Prerequisites
 
 ### System Tools
 
