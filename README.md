@@ -37,6 +37,8 @@ The workflow was tested on these machines/platforms:
 
 The workflow takes ~30 minutes to execute the provided example. The first 6 minutes are pdf convertion to images and OCR; both of these steps are the most cpu hungry steps of the workflow but even a 12 year old machine performed very well.  The remaining time are the API calls from EXTRACT and Worms API both of which have system sleep enabled not to overload the servers.
 
+In terms of storage, the pdf convertion step, creates tmp files that in the case of a big pdf (>50 pages) multiple gigabytes are reserved.
+
 ## Prerequisites
 
 ### System Tools
@@ -77,6 +79,7 @@ There are two options required, -f that specifies the location of the pdf file w
 * `extract_organisms_worms.tsv` Aphia Ids and their data
 * `gnfinder-species_worms.tsv` Aphia Ids and their data
 
+!!! Carefull in case you choose a big pdf file (>50 pages). See below before running!!!
 
 ## PDF text extraction
 
