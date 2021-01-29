@@ -79,7 +79,7 @@ There are two options required, -f that specifies the location of the pdf file w
 * `extract_organisms_worms.tsv` Aphia Ids and their data
 * `gnfinder-species_worms.tsv` Aphia Ids and their data
 
-!!! Carefull in case you choose a big pdf file (>50 pages). See below before running!!!
+!!! Carefull in case you choose a big pdf file (>50 pages). See [below](#caution-for-large-pdf-files) before running!!!
 
 ## PDF text extraction
 
