@@ -102,7 +102,12 @@ convert -density 400 legacy-literature.pdf -quality 100 legacy-literature.png
 
 The option `density` refers to the pixels of the image and `quality 100` is set to make sure that 100% of the quality is maintained upon transformation. 
 
-Caution: if the pdf file has more than 50 pages ImageMagick creates huge tmp files. If you handle these files see [these instructions](https://imagemagick.org/script/command-line-options.php#limit) to limit available resourses.
+#### Caution for large pdf files
+
+if the pdf file has more than 50 pages ImageMagick creates huge tmp files. If you handle these files see [these instructions](https://imagemagick.org/script/command-line-options.php#limit) to limit available resourses.
+
+
+After the png convertion we run tesseract for each of these images.
 
 ```
 for f in *.png; do tesseract -l eng $f ${f%".png"}; done
