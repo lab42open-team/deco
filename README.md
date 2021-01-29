@@ -179,6 +179,7 @@ Using standard methodology for evaluation the results from each tool can be clas
 ## Future improvements
 
 * incorporate geolocation mining technologies in the workflow like [`CLEAR Earth`](https://github.com/ClearEarthProject/ClearEarthNLP)
+* use the locality results from ClearEarth and/or Standford NER tools to get Gazetteer Records from [MarineRegions.org API](https://www.marineregions.org/gazetteer.php?p=webservices&type=rest#!/getGazetteerRecordsByName/Array)
 * process at the paragraph level to retrieve co-occurrencies of organisms and environments
 * further optimize the output in [Darwin Core format](https://dwc.tdwg.org)
 
