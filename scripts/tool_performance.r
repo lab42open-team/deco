@@ -39,10 +39,12 @@ manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% dplyr::filter(
 manual_ipt_aphia_id <- manual_ipt %>% distinct(aphia_id)
 ### DO not run
 ## Output of worms API to get the records associated with arphia ids
-extract_aphia_ids <- get_AphiaIDs_extract(manual_ipt_aphia_id$aphia_id,"aphia_id")
+#extract_aphia_ids <- get_AphiaIDs_extract(manual_ipt_aphia_id$aphia_id,"aphia_id")
 
-write_delim(extract_aphia_ids, "ipt_organisms_worms.tsv", delim="\t", col_names=T)
+#write_delim(extract_aphia_ids, "../example-legacy-literature/ipt_aphia_ids_records_worms.tsv", delim="\t", col_names=T)
+manual_ipt_aphia_id_records <- read_delim("../example-legacy-literature/ipt_aphia_ids_records_worms.tsv", delim="\t", col_names=T)
 
+manual_ipt_aphia_id_records %>% distinct(AphiaID,rank) %>% group_by(rank) %>% summarize(total=n())
 ## NER and Entity Mapping files load
 
 ### EXTRACT
