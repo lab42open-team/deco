@@ -34,7 +34,7 @@ extract_file <- read_delim(paste(directory,"/",random_id,"-extract.tsv",sep=""),
 gnfinder <- read_delim(paste(directory,"/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F)
 
 ## Output of NCBI to worms id
-extract_aphia_ids <- get_AphiaIDs_extract(extract_file$ncbi_id)
+extract_aphia_ids <- get_AphiaIDs_extract(extract_file$ncbi_id,"EXTRACT")
 
 write_delim(extract_aphia_ids, paste(directory,"/",random_id,"-extract_organisms_worms.tsv",sep=""), delim="\t", col_names=T)
 
