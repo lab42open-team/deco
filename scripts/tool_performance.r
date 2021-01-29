@@ -28,6 +28,7 @@ directory <- "output"
 library(tidyverse)
 library(jsonlite)
 
+source("functions_entity_mapping.r")
 # Data input
 
 ## Manual curation
@@ -36,6 +37,11 @@ manual_ipt <- readxl::read_excel("../example-legacy-literature/reportofbritisha1
 manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% dplyr::filter(grepl(x=scientificName, pattern='\\w \\w'))
 
 manual_ipt_aphia_id <- manual_ipt %>% distinct(aphia_id)
+### DO not run
+## Output of worms API to get the records associated with arphia ids
+extract_aphia_ids <- get_AphiaIDs_extract(manual_ipt_aphia_id$aphia_id,"aphia_id")
+
+write_delim(extract_aphia_ids, "ipt_organisms_worms.tsv", delim="\t", col_names=T)
 
 ## NER and Entity Mapping files load
 
