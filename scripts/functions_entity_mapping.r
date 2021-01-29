@@ -12,8 +12,13 @@ worms_api <- function(tool,id_query){
         
         ## worms API based on names
         url <- paste("https://www.marinespecies.org/rest/AphiaRecordsByName/",id_query,"?like=true&marine_only=false&offset=1",sep="")
+    } else if (tool=="aphia_id") {
+        
+        ## get all records from worms API based on aphia id
+        url <- paste("https://www.marinespecies.org/rest/AphiaRecordByAphiaID/",id_query,sep="")
+
     } else {
-        print("Please choose between 'EXTRACT' and 'gnfinder' for the worms API")
+        print("Please choose between 'EXTRACT', 'gnfinder' and Aphia ids for the worms API")
         break
     }
 
@@ -43,9 +48,9 @@ list_null <- function(x) {
 
 # Main function. It requires the tool names, currently EXTRACT and gnfinder to output a dataframe with all the information stored in Worms database.
 #
-get_AphiaIDs_extract <- function(vector_ids) {
+get_AphiaIDs_extract <- function(vector_ids,tool) {
 
-    tool <- "EXTRACT"
+    tool <- tool
     vector_ids <- vector_ids
     worms_content <- list()
 
