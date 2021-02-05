@@ -29,9 +29,12 @@ RUN export CXX=/usr/bin/g++
 RUN export FC=/usr/bin/gfortran
 RUN export PERL=/usr/bin/perl
 
+# System libraries for tidyverse
 RUN apt-get update
 RUN apt-get install -y libpcre3-dev libpcre2-dev libpcre-ocaml-dev libghc-regex-pcre-dev
-RUN apt-get install -y libcurl4-openssl-dev
+RUN apt-get update
+RUN apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev
+RUN apt-get update
 
 # Install R
 WORKDIR /home
@@ -44,15 +47,15 @@ RUN make install
 RUN Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
 
 # Ghostscript
+WORKDIR /home
+RUN wget https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9533/ghostscript-9.53.3.tar.gz
+RUN tar -xvf ghostscript-9.53.3.tar.gz
+WORKDIR cd ghostscript-9.53.3
+RUN ./configure
+RUN make
+RUN make install
 
-#RUN mkdir -p /installs
-#RUN cd /installs && wget http://downloads.ghostscript.com/public/binaries/ghostscript-9.53.3-linux-x86_64.tgz
-#RUN cd /installs && tar -xvf ghostscript-9.53.3-linux-x86_64.tgz
-#
-#ENV PATH /installs/ghostscript-9.53.3-linux-x86_64:$PATH
-#
-#RUN apt-get -y install build-essential
-#RUN cd /installs && wget http://downloads.ghostscript.com/public/ghostpdl-9.53.3.tar.gz
-#RUN cd /installs && tar -xvf ghostpdl-9.53.3.tar.gz
-#RUN apt-get -y install autoconf autogen
-#RUN cd /installs/ghostpdl-9.53.3 && ./autogen.sh && ./configure && make -j 5 && make install
+# ImageMagick
+WORKDIR /home
+
+
