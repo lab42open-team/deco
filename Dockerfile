@@ -1,5 +1,6 @@
 FROM ubuntu:18.04 
 MAINTAINER Savvas Paragkamian s.paragkamian@hcmr.gr
+
 # Basic ubuntu tools
 RUN apt-get update && apt-get install -y wget \
     && apt-get install -qq -y curl
@@ -8,11 +9,9 @@ RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN apt-get update
 
-
-## if i have R on my image already, i need to remove everything of it, so:
+# R dependencies
 RUN apt-get remove -y r-base-core
 
-## if i do NOT have any R version, i can skip the previous command
 RUN apt-get install -y gfortran
 RUN apt-get install -y build-essential
 RUN apt-get install -y fort77
@@ -22,18 +21,20 @@ RUN apt-get install -y gcc-multilib
 RUN apt-get install -y gobjc++
 RUN apt-get install -y aptitude
 RUN aptitude install -y libreadline-dev
-RUN apt-get install libbz2-dev
+RUN apt-get update
+RUN apt-get install -y libbz2-dev
 
 RUN export CC=/usr/bin/gcc
 RUN export CXX=/usr/bin/g++
 RUN export FC=/usr/bin/gfortran
 RUN export PERL=/usr/bin/perl
 
+RUN apt-get update
 RUN apt-get install -y libpcre3-dev libpcre2-dev libpcre-ocaml-dev libghc-regex-pcre-dev
+RUN apt-get install -y libcurl4-openssl-dev
 
 # Install R
 WORKDIR /home
-#RUN apt-get install -y xorg-dev
 RUN wget https://ftp.cc.uoc.gr/mirrors/CRAN/src/base/R-4/R-4.0.3.tar.gz
 RUN tar -xf R-4.0.3.tar.gz
 WORKDIR /home/R-4.0.3
