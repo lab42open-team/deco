@@ -102,7 +102,7 @@ WORKDIR /home
 RUN wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.tar.gz
 RUN tar -zxf 4.1.1.tar.gz
 WORKDIR /home/4.1.1
-RUN ./automake.sh
+RUN ./autogen.sh
 RUN ./configure
 RUN make
 RUN make install
