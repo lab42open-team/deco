@@ -1,6 +1,10 @@
 FROM ubuntu:18.04 
 MAINTAINER Savvas Paragkamian s.paragkamian@hcmr.gr
 
+## for apt to be noninteractive
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN true
+
 # Basic ubuntu tools
 RUN apt-get update && apt-get install -y wget \
     && apt-get install -qq -y curl
@@ -8,11 +12,20 @@ RUN apt-get update && apt-get install -y wget \
 RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN apt-get update
+
+## preesed tzdata, update package index, upgrade packages and install needed software
+RUN truncate -s0 /tmp/preseed.cfg; \
+    echo "tzdata tzdata/Areas select Europe" >> /tmp/preseed.cfg; \
+    echo "tzdata tzdata/Zones/Europe select Athens" >> /tmp/preseed.cfg; \
+    debconf-set-selections /tmp/preseed.cfg && \
+    rm -f /etc/timezone /etc/localtime && \
+    apt-get update && \
+    apt-get install -y tzdata
+
 RUN apt-get install -y git-all
 
 # R dependencies
 RUN apt-get remove -y r-base-core
-
 RUN apt-get install -y gfortran
 RUN apt-get install -y build-essential
 RUN apt-get install -y fort77
@@ -80,13 +93,11 @@ RUN make
 RUN make install
 
 # jq
-
 RUN apt-get update
 RUN apt-get install -y jq
 RUN apt-get update
 
 # tesseract OCR
-
 WORKDIR /home
 RUN wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.tar.gz
 RUN tar -zxf 4.1.1.tar.gz
@@ -112,11 +123,12 @@ RUN make
 RUN make install
 RUN Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
 
+# Clean the container
+## cleanup of files from setup
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /home/*
 
 # EMODnet workflow
 RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
-
-# Clean the container
 
 # Set "EMODnet-data-archaeology" as my working directory when a container starts
 
