@@ -77,15 +77,16 @@ RUN apt-get update
 WORKDIR /home
 RUN wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
 RUN tar -zxf leptonica-1.80.0.tar.gz
-WORKDIR leptonica-1.80.0
+WORKDIR /home/leptonica-1.80.0
 RUN ./configure
 RUN make
 RUN make install
 # Note that if building Leptonica from source, you may need to ensure that /usr/local/lib is in your library path. This is a standard Linux bug, and the information at Stackoverflow is very helpful.
-#
 
 ## other libraries for images
 RUN apt-get update
+RUN apt-get install -y automake
+RUN apt-get install -y libtool
 RUN apt-get install -y libpng-dev
 RUN apt-get install -y libjpeg8-dev
 RUN apt-get install -y libtiff5-dev
@@ -97,7 +98,11 @@ RUN apt-get update
 WORKDIR /home
 RUN wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.tar.gz
 RUN tar -zxf 4.1.1.tar.gz
-
+WORKDIR /home/4.1.1
+RUN ./automake.sh
+RUN ./configure
+RUN make
+RUN make install
 
 # gnfinder
 WORKDIR /home
@@ -108,6 +113,4 @@ RUN mv gnfinder /usr/local/bin
 # EMODnet workflow
 RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
 
-
-# other command to clean the container
-#
+# Clean the container
