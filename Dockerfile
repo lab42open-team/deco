@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y wget \
 RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN apt-get update
+RUN apt-get install -y git-all
 
 # R dependencies
 RUN apt-get remove -y r-base-core
@@ -50,12 +51,63 @@ RUN Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
 WORKDIR /home
 RUN wget https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9533/ghostscript-9.53.3.tar.gz
 RUN tar -xvf ghostscript-9.53.3.tar.gz
-WORKDIR cd ghostscript-9.53.3
+WORKDIR ghostscript-9.53.3
 RUN ./configure
 RUN make
 RUN make install
 
 # ImageMagick
 WORKDIR /home
+RUN wget https://download.imagemagick.org/ImageMagick/download/ImageMagick.tar.gz
+RUN tar -zxf ImageMagick.tar.gz
+WORKDIR ImageMagick-7.0.10-61
+RUN ./configure
+RUN make
+RUN make install
+
+# jq
+
+RUN apt-get update
+RUN apt-get install -y jq
+RUN apt-get update
+
+# tesseract dependencies
+## leptonica
+
+WORKDIR /home
+RUN wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
+RUN tar -zxf leptonica-1.80.0.tar.gz
+WORKDIR leptonica-1.80.0
+RUN ./configure
+RUN make
+RUN make install
+# Note that if building Leptonica from source, you may need to ensure that /usr/local/lib is in your library path. This is a standard Linux bug, and the information at Stackoverflow is very helpful.
+#
+
+## other libraries for images
+RUN apt-get update
+RUN apt-get install -y libpng-dev
+RUN apt-get install -y libjpeg8-dev
+RUN apt-get install -y libtiff5-dev
+RUN apt-get install -y zlib1g-dev
+RUN apt-get update
+
+# tesseract OCR
+
+WORKDIR /home
+RUN wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.tar.gz
+RUN tar -zxf 4.1.1.tar.gz
 
 
+# gnfinder
+WORKDIR /home
+RUN wget https://github.com/gnames/gnfinder/releases/download/v0.11.1/gnfinder-v0.11.1-linux.tar.gz
+RUN tar -zxf gnfinder-v0.11.1-linux.tar.gz
+RUN mv gnfinder /usr/local/bin
+
+# EMODnet workflow
+RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
+
+
+# other command to clean the container
+#
