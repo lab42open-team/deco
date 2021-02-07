@@ -120,7 +120,7 @@ RUN ldconfig
 #RUN make training
 #RUN make training-install
 
-### download the languages of tesseract
+### download the supporting languages of tesseract
 WORKDIR /home/tesseract-4.1.1/tessdata
 RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
 RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/osd.traineddata
