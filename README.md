@@ -142,7 +142,7 @@ EXTRACT returns a tsv file with 3 columns (tagged_text, entity_type, term_id).
 * term_id is the respective id of the entity. For species EXTRACT uses NCBI ids, for environments Environment Ontology terms and for tissues BRENDA Tissue Ontology terms
 
 
-### gnfinder
+### gnfinder for organisms names
 
 [`gnfinder`](https://github.com/gnames/gnfinder) is a command line tool that finds scientific names from text using dictionary and nlp approaches. It serves as the engine of the online tool [Global Names Recognition and Discovery](http://gnrd.globalnames.org/)and is also used in many other platforms like [Biodiversity Heritage Library](https://about.biodiversitylibrary.org/ufaqs/taxonomic-data-sources-for-names/) among others.
 
@@ -158,6 +158,12 @@ To extract the names
 ```
 more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > legacy-literature-gnfinder-species.tsv
 ```
+
+### Geographic Information Retrieval - Geoparsing
+
+The locality of samplings is equally important in ecology. One of the first tools that extracted locality information from text is [EnvMine](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-294#Sec12) in 2010 which unfortunaly is deprecated. A generic python tool, [mordecai](https://github.com/openeventdata/mordecai), combines the [spacy](https://spacy.io) NLP engine with [keras](https://keras.io) deep learning library both trained from [GeoNames](http://www.geonames.org) gazetteer data.
+
+This when implemented with [marineregions](https://www.marineregions.org/gazetteer.php?p=webservices&type=rest#!/getGazetteerRecordsByName/Array) API will be state of the art. 
 
 ## Entity mapping
 
