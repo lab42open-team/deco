@@ -53,6 +53,7 @@ RUN apt-get update
 # tesseract dependencies
 ## libraries for images, first, before leptonica
 RUN apt-get update
+RUN apt-get install -y pkg-config
 RUN apt-get install -y automake
 RUN apt-get install -y libtool
 RUN apt-get install -y libpng-dev
@@ -62,6 +63,10 @@ RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y libwebp-dev
 RUN apt-get install -y libopenjp2-7-dev
 RUN apt-get install -y libgif-dev
+RUN apt-get install -y libsdl-pango-devel
+RUN apt-get install -y libicu-dev
+RUN apt-get install -y clibcairo2-dev
+RUN apt-get install -y bc
 RUN apt-get update
 
 ## leptonica
@@ -111,6 +116,14 @@ RUN make
 RUN make install
 RUN ldconfig 
 ### ldconfig tells applications where they can find the linked libraries. That's why the above command can be needed after installing something new
+RUN make training
+RUN make training-install
+
+### download the languages of tesseract
+WORKDIR /home/tesseract-4.1.1/tessdata
+RUN wget https://github.com/tesseract-ocr/tessdata/blob/master/eng.traineddata 
+RUN wget https://github.com/tesseract-ocr/tessdata/blob/master/osd.traineddata
+RUN export TESSDATA_PREFIX=/content/tesseract-4.1.1/tessdata
 
 # gnfinder
 WORKDIR /home
