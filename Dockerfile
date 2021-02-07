@@ -101,7 +101,7 @@ RUN apt-get update
 WORKDIR /home
 RUN wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.tar.gz
 RUN tar -zxf 4.1.1.tar.gz
-WORKDIR /home/4.1.1
+WORKDIR /home/tesseract-4.1.1
 RUN ./autogen.sh
 RUN ./configure
 RUN make
