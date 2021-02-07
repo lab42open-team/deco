@@ -120,12 +120,12 @@ RUN ldconfig
 #RUN make training-install
 
 ### download the supporting languages of tesseract
-WORKDIR /home/tesseract-4.1.1/tessdata
+WORKDIR /usr/local/share/tessdata
 RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
 RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/osd.traineddata
-WORKDIR /home/tesseract-4.1.1
-RUN mv tessdata/ /usr/share/
-RUN export TESSDATA_PREFIX=/usr/share/tessdata/
+#WORKDIR /home/tesseract-4.1.1
+#RUN mv tessdata/ /usr/share/
+#RUN export TESSDATA_PREFIX=/usr/share/tessdata/
 
 # gnfinder
 WORKDIR /home
