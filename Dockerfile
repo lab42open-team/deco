@@ -51,6 +51,19 @@ RUN apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev
 RUN apt-get update
 
 # tesseract dependencies
+## libraries for images, first, before leptonica
+RUN apt-get update
+RUN apt-get install -y automake
+RUN apt-get install -y libtool
+RUN apt-get install -y libpng-dev
+RUN apt-get install -y libjpeg8-dev
+RUN apt-get install -y libtiff5-dev
+RUN apt-get install -y zlib1g-dev
+RUN apt-get install -y libwebp-dev
+RUN apt-get install -y libopenjp2-7-dev
+RUN apt-get install -y libgif-dev
+RUN apt-get update
+
 ## leptonica
 
 WORKDIR /home
@@ -61,16 +74,6 @@ RUN ./configure
 RUN make
 RUN make install
 # Note that if building Leptonica from source, you may need to ensure that /usr/local/lib is in your library path. This is a standard Linux bug, and the information at Stackoverflow is very helpful.
-
-## other libraries for images
-RUN apt-get update
-RUN apt-get install -y automake
-RUN apt-get install -y libtool
-RUN apt-get install -y libpng-dev
-RUN apt-get install -y libjpeg8-dev
-RUN apt-get install -y libtiff5-dev
-RUN apt-get install -y zlib1g-dev
-RUN apt-get update
 
 # Main tools installation
 
@@ -106,6 +109,8 @@ RUN ./autogen.sh
 RUN ./configure
 RUN make
 RUN make install
+RUN ldconfig 
+### ldconfig tells applications where they can find the linked libraries. That's why the above command can be needed after installing something new
 
 # gnfinder
 WORKDIR /home
