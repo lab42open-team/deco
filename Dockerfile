@@ -57,16 +57,15 @@ RUN apt-get install -y pkg-config
 RUN apt-get install -y automake
 RUN apt-get install -y libtool
 RUN apt-get install -y libpng-dev
-RUN apt-get install -y libpng12-dev
 RUN apt-get install -y libjpeg8-dev
 RUN apt-get install -y libtiff5-dev
 RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y libwebp-dev
 RUN apt-get install -y libopenjp2-7-dev
 RUN apt-get install -y libgif-dev
-RUN apt-get install -y libsdl-pango-devel
+RUN apt-get install -y libsdl-pango-dev
 RUN apt-get install -y libicu-dev
-RUN apt-get install -y clibcairo2-dev
+RUN apt-get install -y libcairo2-dev
 RUN apt-get install -y bc
 RUN apt-get update
 
@@ -124,7 +123,7 @@ RUN ldconfig
 WORKDIR /home/tesseract-4.1.1/tessdata
 RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
 RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/osd.traineddata
-WORKDIR /home/tesseract-4-1-1
+WORKDIR /home/tesseract-4.1.1
 RUN mv tessdata/ /usr/share/
 RUN export TESSDATA_PREFIX=/usr/share/tessdata/
 
@@ -146,7 +145,7 @@ RUN Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
 
 # Clean the container
 ## cleanup of files from setup
-RUN rm -rf /tmp/* /home/*
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /home/*
 
 # EMODnet workflow
 WORKDIR /home
