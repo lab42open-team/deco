@@ -13,7 +13,7 @@ RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN apt-get update
 
-## preesed tzdata, update package index, upgrade packages and install needed software
+## install GIT and dependency preesed tzdata(requires interaction from user during installation), update package index, upgrade packages and install needed software
 RUN truncate -s0 /tmp/preseed.cfg; \
     echo "tzdata tzdata/Areas select Europe" >> /tmp/preseed.cfg; \
     echo "tzdata tzdata/Zones/Europe select Athens" >> /tmp/preseed.cfg; \
@@ -57,6 +57,7 @@ RUN apt-get install -y pkg-config
 RUN apt-get install -y automake
 RUN apt-get install -y libtool
 RUN apt-get install -y libpng-dev
+RUN apt-get install -y libpng12-dev
 RUN apt-get install -y libjpeg8-dev
 RUN apt-get install -y libtiff5-dev
 RUN apt-get install -y zlib1g-dev
@@ -112,18 +113,20 @@ RUN tar -zxf 4.1.1.tar.gz
 WORKDIR /home/tesseract-4.1.1
 RUN ./autogen.sh
 RUN ./configure
-RUN make
+RUN LDFLAGS="-L/usr/local/lib" CFLAGS="-I/usr/local/include" make
 RUN make install
-RUN ldconfig 
+RUN ldconfig
 ### ldconfig tells applications where they can find the linked libraries. That's why the above command can be needed after installing something new
-RUN make training
-RUN make training-install
+#RUN make training
+#RUN make training-install
 
 ### download the languages of tesseract
 WORKDIR /home/tesseract-4.1.1/tessdata
-RUN wget https://github.com/tesseract-ocr/tessdata/blob/master/eng.traineddata 
-RUN wget https://github.com/tesseract-ocr/tessdata/blob/master/osd.traineddata
-RUN export TESSDATA_PREFIX=/content/tesseract-4.1.1/tessdata
+RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
+RUN wget https://github.com/tesseract-ocr/tessdata_best/raw/master/osd.traineddata
+WORKDIR /home/tesseract-4-1-1
+RUN mv tessdata/ /usr/share/
+RUN export TESSDATA_PREFIX=/usr/share/tessdata/
 
 # gnfinder
 WORKDIR /home
@@ -136,18 +139,18 @@ WORKDIR /home
 RUN wget https://ftp.cc.uoc.gr/mirrors/CRAN/src/base/R-4/R-4.0.3.tar.gz
 RUN tar -xf R-4.0.3.tar.gz
 WORKDIR /home/R-4.0.3
-RUN ./configure 
+RUN ./configure
 RUN make
 RUN make install
 RUN Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
 
 # Clean the container
 ## cleanup of files from setup
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /home/*
+RUN rm -rf /tmp/* /home/*
 
 # EMODnet workflow
+WORKDIR /home
 RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
 
 # Set "EMODnet-data-archaeology" as my working directory when a container starts
-
 WORKDIR /home/EMODnet-data-archaeology
