@@ -62,6 +62,10 @@ In terms of storage, the pdf convertion step, creates tmp files that in the case
 * gnfinder version: v0.11.1
 * EXTRACT version: 2
 
+## Docker container
+
+This workflow is also provided as a Docker container for simplisity of execution. The Docker container is 4.61gb in size.
+
 ## Running instructions
 
 This workflow uses APIs in NER and Entity Mapping so be sure to have a stable internet connection. To run this workflow execute the following command:
@@ -159,12 +163,6 @@ To extract the names
 more legacy-literature-gnfinder.json | jq '.names[] | {name: .name} | [.name] | @tsv' | sed 's/"//g' > legacy-literature-gnfinder-species.tsv
 ```
 
-### Geographic Information Retrieval - Geoparsing
-
-The locality of samplings is equally important in ecology. One of the first tools that extracted locality information from text is [EnvMine](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-294#Sec12) in 2010 which unfortunaly is deprecated. A generic python tool, [mordecai](https://github.com/openeventdata/mordecai), combines the [spacy](https://spacy.io) NLP engine with [keras](https://keras.io) deep learning library both trained from [GeoNames](http://www.geonames.org) gazetteer data.
-
-This when implemented with [marineregions](https://www.marineregions.org/gazetteer.php?p=webservices&type=rest#!/getGazetteerRecordsByName/Array) API will be state of the art. 
-
 ## Entity mapping
 
 The goal in this workflow is to reach to Aphia Ids for organisms mentioned in historical data. The `gnfinder` and `EXTRACT` tools return scientific names and NCBI ids, respectively.
@@ -184,6 +182,7 @@ Using standard methodology for evaluation the results from each tool can be clas
 
 ## Future improvements
 
+* The locality of samplings is equally important in ecology. One of the first tools that extracted locality information from text is [EnvMine](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-294#Sec12) in 2010 which unfortunaly is deprecated. A generic python tool, [mordecai](https://github.com/openeventdata/mordecai), combines the [spacy](https://spacy.io) NLP engine with [keras](https://keras.io) deep learning library both trained from [GeoNames](http://www.geonames.org) gazetteer data. This when implemented with [marineregions](https://www.marineregions.org/gazetteer.php?p=webservices&type=rest#!/getGazetteerRecordsByName/Array) API will be state of the art. 
 * incorporate geolocation mining technologies in the workflow like [`CLEAR Earth`](https://github.com/ClearEarthProject/ClearEarthNLP)
 * use the locality results from ClearEarth and/or Standford NER tools to get Gazetteer Records from [MarineRegions.org API](https://www.marineregions.org/gazetteer.php?p=webservices&type=rest#!/getGazetteerRecordsByName/Array)
 * process at the paragraph level to retrieve co-occurrencies of organisms and environments
