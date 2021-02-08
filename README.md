@@ -62,9 +62,30 @@ In terms of storage, the pdf convertion step, creates tmp files that in the case
 * gnfinder version: v0.11.1
 * EXTRACT version: 2
 
-## Docker container
+## Containers
 
-This workflow is also provided as a Docker container for simplisity of execution. The Docker container is 4.61gb in size.
+This workflow is also provided as a Docker and Singularity container for simplisity of execution. The Docker container is 4.58gb in size.
+
+### Docker image
+
+To run the Docker container locally you must have Docker installed. In linux systems the `sudo` command before `docker` is mandatory.
+
+To download the image:
+
+```
+docker pull savvasparagkamian/emodnet-data-archaeology
+```
+
+Running the workflow:
+
+```
+docker run -it savvasparagkamian/emodnet-data-archaeology
+```
+From inside the container run
+
+```
+./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output
+```
 
 ## Running instructions
 
