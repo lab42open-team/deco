@@ -147,7 +147,7 @@ RUN Rscript -e 'install.packages("tidyverse", repos="https://cran.rstudio.com")'
 ## cleanup of files from setup
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /home/*
 
-# EMODnet workflow
+# EMODnet workflow download from git
 WORKDIR /home
 RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
 
