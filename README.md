@@ -86,6 +86,21 @@ From inside the container run
 ```
 ./scripts/cli-workflow.sh -f example-legacy-literature/reportofbritisha1843-appendix-1.pdf -d output
 ```
+### Singularity container
+
+The workflow is also available as a Singularity container which is suitable for large scale applications of the workflow. 
+
+Download the image:
+
+```
+singularity pull shub://savvas-paragkamian/EMODnet-data-archaeology:latest
+```
+Then `bind` a local directory with the files you want to process and open the shell of singularity
+
+```
+singularity shell --bind user/path/to/directory/:/home/EMODnet-data-archaeology/output EMODnet-data-archaeology_latest.sif
+```
+From the shell you can follow the instructions below to perform the analysis.
 
 ## Running instructions
 
