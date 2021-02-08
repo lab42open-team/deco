@@ -151,5 +151,12 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /home/*
 WORKDIR /home
 RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
 
+#  Change the root password by nothing at all.
+RUN echo "root:Docker!" | chpasswd
+
+# Set the permissions properly
+RUN chmod 777 /home/EMODnet-data-archaeology
+RUN chmod g+s /home/EMODnet-data-archaeology
+
 # Set "EMODnet-data-archaeology" as my working directory when a container starts
 WORKDIR /home/EMODnet-data-archaeology
