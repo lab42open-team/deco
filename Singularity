@@ -8,4 +8,4 @@ From:savvasparagkamian/emodnet-data-archaeology:latest
 
 %runscript
     echo "This gets run when you run the image!" 
-    exec ./scripts/cli-workflow.sh "$@"
+    exec ./home/EMODnet-data-archaeology/scripts/cli-workflow.sh "$@"
