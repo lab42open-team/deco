@@ -249,7 +249,7 @@ This workflow is under the GNU GPLv3 license (for 3rd party components separate 
     along with this program.  If not, [see](http://www.gnu.org/licenses).
 ```
 
-### Licence of dependencies
+### Licences of dependencies
 
 * ghostscript 9.53.3 - [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.html)
 * jq 1.6 - [MIT license](https://github.com/stedolan/jq/blob/master/COPYING)
