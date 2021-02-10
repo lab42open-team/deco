@@ -231,3 +231,14 @@ Georgia Sarafidou (HCMR), Savvas Paragkamian (HCMR), Vasilis Gerovasileiou (HCMR
 ## Licence
 
 All code provided here holds the 2-Clause BSD License.
+
+### Licence of dependencies
+
+* ghostscript 9.53.3 - [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.html)
+* jq 1.6 - [MIT license](https://github.com/stedolan/jq/blob/master/COPYING)
+* ImageMagick 7.0.10-30 - [Copyright 1999-2021 ImageMagick Studio LLC](https://imagemagick.org/script/license.php), a non-profit organization dedicated to making software imaging solutions freely available.
+* tesseract 4.1.1 - [Apache License 2.0](https://github.com/tesseract-ocr/tesseract/blob/master/LICENSE)
+* gnfinder v0.11.1 - [MIT License](https://github.com/gnames/gnfinder/blob/master/LICENSE)
+* EXTRACT v2 - [BSD 2-Clause License](https://extract.jensenlab.org)
+
+
