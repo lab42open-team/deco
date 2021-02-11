@@ -99,8 +99,8 @@ RUN ./configure \
 # ImageMagick
 WORKDIR /home
 RUN wget https://download.imagemagick.org/ImageMagick/download/ImageMagick.tar.gz \
- && tar -zxf ImageMagick.tar.gz
- && rm ImageMagick.tar.gz
+ && tar -zxf ImageMagick.tar.gz \
+ && rm ImageMagick.tar.gz \
  && mv ImageMagick* ImageMagick
 WORKDIR ImageMagick
 RUN ./configure \
