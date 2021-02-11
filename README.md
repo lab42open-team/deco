@@ -1,18 +1,18 @@
 # Programming Workflow for biodiversity legacy literature annotation
 
-[Introduction](#introduction)
-[Purpose](#purpose)
-[Structure](#repository_structure)
-[Testing](#testing)
-[Prerequisites](#prerequisites)
-[Containers](#containers)
-[Instructions](#running_instructions)
-[PDF text extraction](#pdf_text_extraction)
-[Named Entity Recognition](#named_entity_recognition_-_ner)
-[Entity mapping](#entity_mapping)
-[Future improvements](#future_improvements)
-[Citation](#citation)
-[Licence](#licence)
+* [Introduction](#introduction)
+* [Purpose](#purpose)
+* [Structure](#repository-structure)
+* [Testing](#testing)
+* [Prerequisites](#prerequisites)
+* [Containers](#containers)
+* [Instructions](#running-instructions)
+* [PDF text extraction](#pdf-text-extraction)
+* [Named Entity Recognition](#named-entity-recognition---ner)
+* [Entity mapping](#entity-mapping)
+* [Future improvements](#future-improvements)
+* [Citation](#citation)
+* [Licence](#licence)
 
 ## Introduction
 
