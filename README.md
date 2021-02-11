@@ -1,5 +1,19 @@
 # Programming Workflow for biodiversity legacy literature annotation
 
+[Introduction](#introduction)
+[Purpose](#purpose)
+[Structure](#repository_structure)
+[Testing](#testing)
+[Prerequisites](#prerequisites)
+[Containers](#containers)
+[Instructions](#running_instructions)
+[PDF text extraction](#pdf_text_extraction)
+[Named Entity Recognition](#named_entity_recognition_-_ner)
+[Entity mapping](#entity_mapping)
+[Future improvements](#future_improvements)
+[Citation](#citation)
+[Licence](#licence)
+
 ## Introduction
 
 Legacy literature contains valuable information about biodiversity. Dedicated workflows are needed in order to extract this information and transform it in structured data format. This is process is a multiple step process requiring many tools and interdisciplinary knowledge. In 2015, a [workshop](httpse//riojournal.com/articles.php?journal_name=rio&id=10445) was help in [IMBBC - HCMR](https://imbbc.hcmr.gr) to standardize this process within the framework of [EMODnet biology](https://www.emodnet-biology.eu).
