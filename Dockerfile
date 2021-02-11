@@ -100,7 +100,9 @@ RUN ./configure \
 WORKDIR /home
 RUN wget https://download.imagemagick.org/ImageMagick/download/ImageMagick.tar.gz \
  && tar -zxf ImageMagick.tar.gz
-WORKDIR ImageMagick-7.0.10-61
+ && rm ImageMagick.tar.gz
+ && mv ImageMagick* ImageMagick
+WORKDIR ImageMagick
 RUN ./configure \
  && make \
  && make install
