@@ -45,11 +45,11 @@ The workflow was tested on these machines/platforms:
 * macbook pro with 8gb RAM and Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz running macOS Catalina 10.15.7.
 * Hewlett-Packard Compaq Presario laptop with 4gb RAM and Intel(R) Pentium(R) Dual-Core CPU T4200 @ 2.00GHz running Linux Ubuntu 18.04.5 LTS (Bionic Beaver)
 
-| *OS* | *CPU* | *RAM* | *Elapsed time* | *Elapsed time* |
+| *OS* | *CPU* | *RAM* | *Running time (source)* | *Running time (container)* |
 | :----:       |    :----:   |    :----:   |    :----:   |    :----:   |
-| macOS Catalina 10.15.7 | Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz | 8gb | 28 minutes | 33 minutes |
-| Linux Ubuntu 18.04.5 LTS (Bionic Beaver) | Intel(R) Pentium(R) Dual-Core CPU T4200 @ 2.00GHz | 4gb | 20 minutes | 27 minutes |
-| Linux Debian server 4.9.0-8-amd64 | Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz | 64gb | NA | 20 minutes |
+| macOS Catalina 10.15.7 | Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz | 8gb | 28 minutes | 33 minutes (Docker) |
+| Linux Ubuntu 18.04.5 LTS (Bionic Beaver) | Intel(R) Pentium(R) Dual-Core CPU T4200 @ 2.00GHz | 4gb | 20 minutes | 27 minutes (Docker)|
+| Linux Debian server 4.9.0-8-amd64 | Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz | 64gb | NA | 20 minutes (Singularity) |
 
 The workflow takes ~30 minutes to execute the provided example. The first 6 minutes are pdf convertion to images and OCR; both of these steps are the most cpu hungry steps of the workflow but even a 12 year old machine performed very well.  The remaining time are the API calls from EXTRACT and Worms API both of which have system sleep enabled not to overload the servers.
 
