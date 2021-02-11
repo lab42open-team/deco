@@ -10,6 +10,7 @@
 * [PDF text extraction](#pdf-text-extraction)
 * [Named Entity Recognition](#named-entity-recognition---ner)
 * [Entity mapping](#entity-mapping)
+* [Feedback](#feedback)
 * [Future improvements](#future-improvements)
 * [Citation](#citation)
 * [Licence](#licence)
@@ -229,6 +230,14 @@ Using standard methodology for evaluation the results from each tool can be clas
 | :----:       |    :----:   |
 | True Positive (TP) | False positive (FP) |
 | False negative (FN) | True negative (TN) |
+
+## Feedback
+
+We are happy to receive any feedback from users regarding questions, issues and most importanly contributions. If you have any questions please about the workflow please use the [Discussions section](https://github.com/lab42open-team/EMODnet-data-archaeology/discussions).
+
+In case you find any bugs, performance issues or request a new feature from the workflow please submit to [Github Issues](https://github.com/lab42open-team/EMODnet-data-archaeology/issues).
+
+Last but not least, we warmly welcome contributions. Follow the instructions from [Contributing](https://github.com/lab42open-team/EMODnet-data-archaeology/blob/master/CONTRIBUTING.md) document to submit through [Pull requests](https://github.com/lab42open-team/EMODnet-data-archaeology/pulls) your fixes and improvements to the workflow.
 
 ## Future improvements
 
