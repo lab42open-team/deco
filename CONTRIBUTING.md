@@ -66,6 +66,7 @@ git checkout -b my-branch
 ### Pull requests
 
 - From your fork open a pull request in the correct branch. Target the project's `develop` branch if there is one, else go for `master`!
+- Use the Pull request template to assist maintainer to review your code
 - If the maintainer requests further changes just push them to your branch. The PR will be updated automatically.
 - Once the pull request is approved and merged you can pull the changes from `upstream` to your local repo and delete
 your extra branch(es).
