@@ -32,7 +32,7 @@ source("functions_entity_mapping.r")
 # Data input
 
 ## Manual curation
-manual_ipt <- readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls", col_names=T) %>% select(scientificName,scientificNameID, fieldNumber, catalogNumber, occurrenceID) %>% distinct() %>% mutate(aphia_id=gsub(scientificNameID,pattern="urn:lsid:marinespecies.org:taxname:",replace=""))
+manual_ipt <- readxl::read_excel("../example-legacy-literature/reportofbritisha1843-appendix-1_ipt.xls", col_names=T) %>% select(scientificName,scientificNameID, fieldNumber, occurrenceID) %>% distinct() %>% mutate(aphia_id=gsub(scientificNameID,pattern="urn:lsid:marinespecies.org:taxname:",replace=""))
 
 manual_ipt_species <- manual_ipt %>% distinct(scientificName) %>% dplyr::filter(grepl(x=scientificName, pattern='\\w \\w'))
 
@@ -43,7 +43,6 @@ manual_ipt_aphia_id <- manual_ipt %>% distinct(aphia_id)
 
 #write_delim(extract_aphia_ids, "../example-legacy-literature/ipt_aphia_ids_records_worms.tsv", delim="\t", col_names=T)
 manual_ipt_aphia_id_records <- read_delim("../example-legacy-literature/ipt_aphia_ids_records_worms.tsv", delim="\t", col_names=T)
-
 manual_ipt_aphia_id_records %>% distinct(AphiaID,rank) %>% group_by(rank) %>% summarize(total=n())
 ## NER and Entity Mapping files load
 
