@@ -257,7 +257,12 @@ Georgia Sarafidou (HCMR), Savvas Paragkamian (HCMR), Vasilis Gerovasileiou (HCMR
 This workflow is under the GNU GPLv3 license (for 3rd party components separate licenses apply).
 
 ```
-    Copyright (C) 2021  Savvas Paragkamian, Georgia Sarafidou, Dimitra Mavraki, Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, Laura Boicenco, Christos Arvanitidis, Evangelos Pafilis, Vasilis Gerovasileiou
+    Copyright (C) 2021
+    
+    Savvas Paragkamian, Georgia Sarafidou, Dimitra Mavraki, 
+    Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, 
+    Laura Boicenco, Haris Zafeiropoulos, Christos Arvanitidis, Evangelos Pafilis, 
+    Vasilis Gerovasileiou
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
