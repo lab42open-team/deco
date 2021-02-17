@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Name:     cli-workflow
+# Name:     DECO - bioDivErsity Data Curation wOrkflow
 #
 # Purpose:  Demonstration of a Command Line Interface workflow for biodiversity data rescue. Starting from OCR and going to NER and Entity Mapping this workflow is extentable to other tools and scalable to big libraries with biodiversity scanned documents
 #
@@ -15,7 +15,7 @@
 #           Hellenic Centre for Marine Research (HCMR)
 #
 # Created:  12/01/2021
-# License:  2-clause BSD License
+# License:  GNU GPLv3 license
 #
 # Note:     comments and specifics are given in-line and in README.md of the repository
 #
