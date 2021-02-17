@@ -1,13 +1,13 @@
 Bootstrap:docker
-From:savvasparagkamian/emodnet-data-archaeology:latest
+From:savvasparagkamian/deco:latest
 
 %labels
     Maintainer Savvas Paragkamian
 %post
-    export WORKDIR="/home/EMODnet-data-archaeology"
+    export WORKDIR="/home/deco"
     echo "export WORKDIR=$WORKDIR" >> $SINGULARITY_ENVIRONMENT
-    chmod -R 777 /home/EMODnet-data-archaeology
+    chmod -R 777 /home/deco
 
 %runscript
     echo "Arguments received: $*"
-    exec ./home/EMODnet-data-archaeology/scripts/cli-workflow.sh "$@"
+    exec ./home/deco/scripts/cli-workflow.sh "$@"

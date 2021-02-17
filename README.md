@@ -89,13 +89,13 @@ To run the Docker container locally you must have Docker installed. In linux sys
 To download the image:
 
 ```
-docker pull savvasparagkamian/emodnet-data-archaeology
+docker pull savvasparagkamian/deco
 ```
 
 Running the workflow:
 
 ```
-docker run -it savvasparagkamian/emodnet-data-archaeology
+docker run -it savvasparagkamian/deco
 ```
 From inside the container run
 
@@ -109,12 +109,12 @@ The workflow is also available as a Singularity container which is suitable for 
 Download the image:
 
 ```
-singularity pull shub://savvas-paragkamian/EMODnet-data-archaeology:latest
+singularity pull shub://savvas-paragkamian/deco:latest
 ```
 Then `bind` a local directory with the files you want to process and open the shell of singularity
 
 ```
-singularity shell --bind user/path/to/directory/:/home/EMODnet-data-archaeology/output EMODnet-data-archaeology_latest.sif
+singularity shell --bind user/path/to/directory/:/home/deco/output deco.sif
 ```
 From the shell you can follow the instructions below to perform the analysis.
 
@@ -234,11 +234,11 @@ Using standard methodology for evaluation the results from each tool can be clas
 
 ## Feedback
 
-We are happy to receive any feedback from users regarding questions, issues and most importanly contributions. If you have any questions please about the workflow please use the [Discussions section](https://github.com/lab42open-team/EMODnet-data-archaeology/discussions).
+We are happy to receive any feedback from users regarding questions, issues and most importanly contributions. If you have any questions please about the workflow please use the [Discussions section](https://github.com/lab42open-team/deco/discussions).
 
-In case you find any bugs, performance issues or request a new feature from the workflow please submit to [Github Issues](https://github.com/lab42open-team/EMODnet-data-archaeology/issues).
+In case you find any bugs, performance issues or request a new feature from the workflow please submit to [Github Issues](https://github.com/lab42open-team/deco/issues).
 
-Last but not least, we warmly welcome contributions. Follow the instructions from [Contributing](https://github.com/lab42open-team/EMODnet-data-archaeology/blob/master/CONTRIBUTING.md) document to submit through [Pull requests](https://github.com/lab42open-team/EMODnet-data-archaeology/pulls) your fixes and improvements to the workflow.
+Last but not least, we warmly welcome contributions. Follow the instructions from [Contributing](https://github.com/lab42open-team/deco/blob/master/CONTRIBUTING.md) document to submit through [Pull requests](https://github.com/lab42open-team/deco/pulls) your fixes and improvements to the workflow.
 
 ## Future improvements
 

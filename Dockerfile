@@ -152,16 +152,16 @@ RUN rm -rf /var/lib/apt/lists/* \
     /tmp/* \
     /home/*
 
-# EMODnet workflow download from git
+# deco workflow download from git
 WORKDIR /home
-RUN git clone https://github.com/lab42open-team/EMODnet-data-archaeology.git
+RUN git clone https://github.com/lab42open-team/deco.git
 
 #  Change the root password by nothing at all.
 RUN echo "root:Docker!" | chpasswd
 
 # Set the permissions properly
-RUN chmod 777 /home/EMODnet-data-archaeology \
- && chmod g+s /home/EMODnet-data-archaeology
+RUN chmod 777 /home/deco \
+ && chmod g+s /home/deco
 
-# Set "EMODnet-data-archaeology" as my working directory when a container starts
-WORKDIR /home/EMODnet-data-archaeology
+# Set "deco" as my working directory when a container starts
+WORKDIR /home/deco
