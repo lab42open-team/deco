@@ -37,6 +37,7 @@ This repository is supplementary to this report for the programming / Command Li
 DECO workflow is a demonstration of our vision, and not a complete pipeline tool, for biodiversity data rescue using programming tools. It brings together state of the art image processing and OCR tools with text mining technologies and Web APIs in order to assist curators. Furthermore, by using programming interface and Command Line Tools this workflow is scalable and customisable.
 
 <img src="DECO-workflow.png" width="60%">
+
 **Figure 2** DECO workflow takes a PDF file as input and generates tables with information for taxa and generates a report for a more comprehensive summary of the results.
 
 ## Repository structure
@@ -122,9 +123,13 @@ singularity pull shub://savvas-paragkamian/deco:latest
 Then `bind` a local directory with the files you want to process and open the shell of singularity
 
 ```
-singularity shell --bind user/path/to/directory/:/home/deco/output deco.sif
+singularity shell --bind user/path/to/directory/:/home/deco/output deco_latest.sif
 ```
 From the shell you can follow the instructions below to perform the analysis.
+
+```
+Singularity deco_latest.sif:/home/deco> ./scripts/cli-workflow.sh -f output/legacy_publication.pdf -d output/
+```
 
 ## Running instructions
 
