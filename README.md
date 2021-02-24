@@ -64,6 +64,10 @@ The workflow takes ~30 minutes to execute the provided example. The first 6 minu
 
 In terms of storage, the pdf convertion step, creates tmp files that in the case of a big pdf (>50 pages) multiple gigabytes are reserved.
 
+### Large scale test
+
+We applied DECO the [The marine Bivalvia (Mollusca) of Greece](http://www.marinespecies.org/imis.php?module=ref&refid=206202), a 320 pages scanned document, on the Linux Debian server described above through singularity. The OCR step took 33 minutes to complete and used all the ram memory available ~60gb. The following steps lasted for 3h and 12minutes reaching a total of 3h and 45 minutes elapsed time.
+
 ## Prerequisites
 
 ### System Tools
