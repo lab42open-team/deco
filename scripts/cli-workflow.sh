@@ -118,4 +118,8 @@ echo -e "Now performing Entity Mapping of organisms to Aphia Ids... API is invok
 Rscript "scripts/entity_mapping.r" "$id" "$directory"
 echo -e "Finished!"
 
+## Reporting
+
+Rscript -e 'library(rmarkdown); args <- commandArgs(trailingOnly=TRUE) ; rmarkdown::render("scripts/report.rmd",output_dir=args[2], output_file=paste(args[1],"-report.html",sep=""))' "$id" "$directory"
+
 ## end of script

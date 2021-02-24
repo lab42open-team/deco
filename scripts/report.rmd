@@ -1,0 +1,20 @@
+---
+title: "Report"
+author: "DECO contributors"
+date: '`r Sys.Date()`'
+---
+
+This is the first report
+
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+
+args <- commandArgs(trailingOnly=TRUE)
+random_id <- args[1]
+directory <- args[2]
+
+```
+This is the random id `r random_id`
+
+
