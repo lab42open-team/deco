@@ -4,23 +4,26 @@ author: "DECO contributors"
 date: '`r Sys.Date()`'
 ---
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
-library(tidyverse)
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE,results='hide'}
+suppressPackageStartupMessages(library(tidyverse))
 
 args <- commandArgs(trailingOnly=TRUE)
 random_id <- args[1]
 directory <- args[2]
 
-gnfinder_worms <- read_delim(paste("../",directory,"/",random_id,"-gnfinder_organisms_worms.tsv", sep=""), delim="\t", col_names=T)
+gnfinder_worms <- read_delim(paste("../",directory,"/",random_id,"-gnfinder_organisms_worms.tsv", sep=""), delim="\t", col_names=T,col_types = cols())
 
-extract_worms <- read_delim(paste("../",directory,"/",random_id,"-extract_organisms_worms.tsv",sep=""), delim="\t", col_names=T)
+gnfinder_worms_rank <- gnfinder_worms %>% group_by(rank) %>% summarise(total=n(), .groups = 'drop')
 
+extract_worms <- read_delim(paste("../",directory,"/",random_id,"-extract_organisms_worms.tsv",sep=""), delim="\t", col_names=T,col_types = cols())
+
+extract_worms_rank <- extract_worms %>% group_by(rank) %>% summarise(total=n(), .groups = 'drop')
 ```
 This report is automatically generated and displays running information of the workflow as well as some descriptives of the results. The random id of the run is `r random_id`.
 
 
 ```{r, warning=FALSE, message=FALSE, echo=FALSE}
-gnfinder_worms_rank <- gnfinder_worms %>% group_by(rank) %>% summarise(total=n())
 
 ggplot()+
   geom_col(data = gnfinder_worms_rank, aes(x = rank, y = total), fill="cornflowerblue",show.legend = F)+
@@ -31,7 +34,6 @@ ggplot()+
   theme(panel.grid.minor = element_blank(), panel.grid.major = element_blank(),axis.text.x = element_text(angle = 45, hjust = 1))
 
 
-extract_worms_rank <- extract_worms %>% group_by(rank) %>% summarise(total=n())
 
 ggplot()+
   geom_col(data = extract_worms_rank, aes(x = rank, y = total), fill="deepskyblue1",show.legend = F)+
