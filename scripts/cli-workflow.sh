@@ -71,7 +71,7 @@ cd $directory
 text_output=ocr-${id}.txt
 touch $text_output
 
-echo -e "Thank you for using this workflow! \n\nCopyright (C) 2021 Savvas Paragkamian, Georgia Sarafidou, Dimitra Mavraki, Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, Laura Boicenco, Haris Zafeiropoulos, Christos Arvanitidis, Evangelos Pafilis, Vasilis Gerovasileiou.\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it under certain conditions.\n\n"
+echo -e "Thank you for using DECO workflow! \n\nCopyright (C) 2021 Savvas Paragkamian, Georgia Sarafidou, Dimitra Mavraki, Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, Laura Boicenco, Haris Zafeiropoulos, Christos Arvanitidis, Evangelos Pafilis, Vasilis Gerovasileiou.\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it under certain conditions.\n\n"
 
 echo -e "workflow started on $DATE with id=$id\n"
 
@@ -119,12 +119,12 @@ Rscript "scripts/entity_mapping.r" "$id" "$directory"
 
 ## Reporting
 
-echo -e "Generating the report."
+echo -e "\nGenerating the report."
 
-Rscript -e 'library(rmarkdown); args <- commandArgs(trailingOnly=TRUE) ; rmarkdown::render("scripts/report.rmd",output_dir=args[2], output_file=paste(args[1],"-report.html",sep=""))' "$id" "$directory"
+Rscript -e 'suppressMessages(library(rmarkdown)); args <- commandArgs(trailingOnly=TRUE) ; rmarkdown::render("scripts/report.rmd",output_dir=args[2], output_file=paste(args[1],"-report.html",sep=""),quiet=TRUE)' "$id" "$directory"
 
 time_end=`date +%s`
 
-echo -e "Finished in $((time_end-time_start)) seconds."
+echo -e "DECO workflow was running for $((time_end-time_start)) seconds."
 
 ## end of script
