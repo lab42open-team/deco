@@ -29,9 +29,9 @@ library(httr)
 source("scripts/functions_entity_mapping.r")
 
 ## Input
-extract_file <- read_delim(paste(directory,"/",random_id,"-extract.tsv",sep=""), delim="\t",col_names=T) %>% dplyr::filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id))
+extract_file <- read_delim(paste(directory,"/",random_id,"-extract.tsv",sep=""), delim="\t",col_names=T) %>% dplyr::filter(entity_type==-2) %>% mutate(ncbi_id=gsub('NCBI:','',term_id)) %>% distinct(.)
 
-gnfinder <- read_delim(paste(directory,"/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F)
+gnfinder <- read_delim(paste(directory,"/",random_id,"-gnfinder-species.tsv",sep=""), delim="\t",col_names=F) %>% distinct(.)
 
 ## Output of NCBI to worms id
 extract_aphia_ids <- get_AphiaIDs_extract(extract_file$ncbi_id,"EXTRACT")
