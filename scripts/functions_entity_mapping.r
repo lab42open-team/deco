@@ -23,7 +23,7 @@ worms_api <- function(tool,id_query){
     }
 
     get_url <- GET(url)
-    message_for_status(get_url)
+#    message_for_status(get_url)
     worms_status <- status_code(get_url)
     worms_content <- content(get_url)
     
@@ -53,6 +53,9 @@ get_AphiaIDs_extract <- function(vector_ids,tool) {
     tool <- tool
     vector_ids <- vector_ids
     worms_content <- list()
+    total=length(vector_ids)
+    print("EXTRACT")
+    pb <- txtProgressBar(min = 0, max = total, style = 3)
 
     worms_df <- data.frame(matrix(data = NA,nrow= length(vector_ids),ncol=29))
 
@@ -85,8 +88,9 @@ get_AphiaIDs_extract <- function(vector_ids,tool) {
         }
         ## not to overload the Worms server
         Sys.sleep(sample(c(0.5,0.6,0.7,0.75), 1))
+        setTxtProgressBar(pb, i)
     }
-    
+    close(pb)
     return(worms_df)
 }
 
@@ -96,8 +100,11 @@ get_AphiaIDs_gnfinder <- function(vector_ids) {
     vector_ids <- vector_ids
     worms_content <- list()
 
-    worms_df <- data.frame(matrix(data = NA,nrow=1,ncol=29))
+    total=length(vector_ids)
+    print(tool)
+    pb <- txtProgressBar(min = 0, max = total, style = 3)
 
+    worms_df <- data.frame(matrix(data = NA,nrow=1,ncol=29))
 
     for (i in seq(1,length(vector_ids),by=1)){
 
@@ -129,9 +136,11 @@ get_AphiaIDs_gnfinder <- function(vector_ids) {
 
         worms_df <- bind_rows(row_result, worms_df)
         Sys.sleep(sample(c(0.5,0.6,0.7,0.75), 1))
+        setTxtProgressBar(pb, i)
     }
 
     colnames(worms_df) <- c("AphiaID","url","scientificname","authority","status","unacceptreason","taxonRankID","rank","valid_AphiaID","valid_name","valid_authority","parentNameUsageID","kingdom","phylum","class","order","family","genus","citation","lsid","isMarine","isBrackish","isFreshwater","isTerrestrial","isExtinct","match_type","modified","id","tool")
     
     return(worms_df)
+    close(pb)
 }
