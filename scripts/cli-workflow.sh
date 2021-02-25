@@ -116,10 +116,15 @@ cd ../
 echo -e "Now performing Entity Mapping of organisms to Aphia Ids... API is invoked, be sure to have a stable internet connection."
 
 Rscript "scripts/entity_mapping.r" "$id" "$directory"
-echo -e "Finished!"
 
 ## Reporting
 
+echo -e "Generating the report."
+
 Rscript -e 'library(rmarkdown); args <- commandArgs(trailingOnly=TRUE) ; rmarkdown::render("scripts/report.rmd",output_dir=args[2], output_file=paste(args[1],"-report.html",sep=""))' "$id" "$directory"
+
+time_end=`date +%s`
+
+echo -e "Finished in $((time_end-time_start)) seconds."
 
 ## end of script
