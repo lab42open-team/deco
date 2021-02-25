@@ -240,6 +240,10 @@ For organism names the GET request URL is `https://www.marinespecies.org/rest/Ap
 
 For NCBI ids the GET request URL is `https://www.marinespecies.org/rest/AphiaRecordByExternalID/7568?type=ncbi` for NCBI:7568.
 
+## Reporting
+
+An automated report is generated with DECO that visually presents the results of the previous steps. The report is an html file exported from a Rmarkdown script.
+
 ## Tool performance evaluation
 
 Using standard methodology for evaluation the results from each tool can be classified with the following conditions by comparing them withe manual curated spreadsheet.
