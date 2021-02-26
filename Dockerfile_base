@@ -53,7 +53,9 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libcurl4-openssl-dev \
     libssl-dev \
- && apt-get update
+ && apt-get update \
+ && wget https://github.com/jgm/pandoc/releases/download/2.11.4/pandoc-2.11.4-1-amd64.deb \
+ && dpkg -i pandoc-2.11.4-1-amd64.deb
 
 # tesseract dependencies
 ## libraries for images, first, before leptonica
