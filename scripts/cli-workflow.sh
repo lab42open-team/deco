@@ -121,7 +121,7 @@ Rscript "scripts/entity_mapping.r" "$id" "$directory"
 
 echo -e "\nGenerating the report."
 
-Rscript -e 'suppressMessages(library(rmarkdown)); args <- commandArgs(trailingOnly=TRUE) ; rmarkdown::render("scripts/report.rmd",output_dir=args[2], output_file=paste(args[1],"-report.html",sep=""),quiet=TRUE)' "$id" "$directory"
+Rscript -e 'suppressMessages(library(rmarkdown)); args <- commandArgs(trailingOnly=TRUE) ; rmarkdown::render("scripts/report.rmd",output_dir=args[2], intermediates_dir=args[2], output_file=paste(args[1],"-report.html",sep=""),quiet=TRUE)' "$id" "$directory"
 
 time_end=`date +%s`
 
