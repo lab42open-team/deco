@@ -11,3 +11,4 @@ From:savvasparagkamian/deco:latest
 %runscript
     echo "Arguments received: $*"
     exec ./home/deco/scripts/cli-workflow.sh "$@"
+

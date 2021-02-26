@@ -152,7 +152,8 @@ RUN rm -rf /var/lib/apt/lists/* \
     /tmp/* \
     /home/*
 
-# deco workflow download from git
+# DECO workflow download from git
+
 WORKDIR /home
 RUN git clone https://github.com/lab42open-team/deco.git
 
