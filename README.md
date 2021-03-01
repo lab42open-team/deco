@@ -1,6 +1,6 @@
 # DECO  - bioDivErsity Data Curation wOrkflow
 
-[![GitHub release](https://img.shields.io/badge/version-1.1.1-blue)](https://github.com/lab42open-team/deco/releases)
+[![GitHub release](https://img.shields.io/badge/version-1.1.2-blue)](https://github.com/lab42open-team/deco/releases)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/lab42open-team/deco/blob/master/LICENSE)
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/5193)
 
