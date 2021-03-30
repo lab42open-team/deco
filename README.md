@@ -1,4 +1,4 @@
-# DECO  - bioDivErsity Data Curation wOrkflow
+# DECO  - bioDivErsity data Curation wOrkflow
 
 [![GitHub release](https://img.shields.io/badge/version-1.1.2-blue)](https://github.com/lab42open-team/deco/releases)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/lab42open-team/deco/blob/master/LICENSE)
