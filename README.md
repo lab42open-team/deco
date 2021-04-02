@@ -129,6 +129,10 @@ Then `bind` a local directory with the files you want to process and open the sh
 ```
 singularity shell --bind user/path/to/directory/:/home/deco/output deco_latest.sif
 ```
+and from `Singularity deco_latest.sif:~>` run
+```
+cd /home/deco/
+```
 From the shell you can follow the instructions below to perform the analysis.
 
 ```
@@ -271,7 +275,7 @@ Last but not least, we warmly welcome contributions. Follow the instructions fro
 
 ## Citation
 
-Georgia Sarafidou (HCMR), Savvas Paragkamian (HCMR), Vasilis Gerovasileiou (HCMR), Evangelos Pafilis (HCMR), Dimitra Mavraki (HCMR), Christina Pavloudi (HCMR), Christos Arvanitidis (HCMR / LifeWatch ERIC), Joana Beja (VLIZ), Menashè Eliezer (OGS), Marina Lipizer (OGS), Laura Boicenco (NIMRD). Scientific document on the design of the workflow of text mining technologies in data archaeology. EMODnet - WP3- Data archaeology. 07/12/2020.
+Georgia Sarafidou (HCMR), Savvas Paragkamian (HCMR), Vasilis Gerovasileiou (HCMR), Evangelos Pafilis (HCMR), Dimitra Mavraki (HCMR), Christina Pavloudi (HCMR), Christos Arvanitidis (HCMR / LifeWatch ERIC), Joana Beja (VLIZ), Menashè Eliezer (OGS), Marina Lipizer (OGS), Laura Boicenco (NIMRD). Scientific document on the design of the workflow of text mining technologies in data archaeology. EMODnet - WP3- Data archaeology. 07/12/2020.
 
 ## Licence
 
@@ -281,7 +285,7 @@ This workflow is under the GNU GPLv3 license (for 3rd party components separate 
     Copyright (C) 2021
     
     Savvas Paragkamian, Georgia Sarafidou, Dimitra Mavraki, 
-    Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, 
+    Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, 
     Laura Boicenco, Haris Zafeiropoulos, Christos Arvanitidis, Evangelos Pafilis, 
     Vasilis Gerovasileiou
 
