@@ -71,7 +71,7 @@ cd $directory
 text_output=ocr-${id}.txt
 touch $text_output
 
-echo -e "Thank you for using DECO workflow! \n\nCopyright (C) 2021 Savvas Paragkamian, Georgia Sarafidou, Dimitra Mavraki, Christina Pavloudi, Joana Beja, Menashè Eliezer, Marina Lipizer, Laura Boicenco, Haris Zafeiropoulos, Christos Arvanitidis, Evangelos Pafilis, Vasilis Gerovasileiou.\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it under certain conditions.\n\n"
+echo -e "Thank you for using DECO workflow! \n\nCopyright (C) 2021 Savvas Paragkamian.\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it under certain conditions.\n\n"
 
 echo -e "workflow started on $DATE with id=$id\n"
 
