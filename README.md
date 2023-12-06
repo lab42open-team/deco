@@ -11,7 +11,7 @@
 * [Structure](#repository-structure)
 * [Testing](#testing)
 * [Prerequisites](#prerequisites)
-* [Containers](#containers)
+* [Environment](#environment)
 * [Instructions](#running-instructions)
 * [PDF text extraction](#pdf-text-extraction)
 * [Named Entity Recognition](#named-entity-recognition---ner)
@@ -91,7 +91,22 @@ We applied DECO the [The marine Bivalvia (Mollusca) of Greece](http://www.marine
 * gnfinder version: v0.11.1
 * EXTRACT version: 2
 
-## Containers
+## Environment
+
+### Conda
+
+Conda environment is the suggested method to run DECO. Using miniconda as the base
+is the preferred base.
+
+```
+conda env create --file environment.yml --name deco
+conda activate deco
+conda env update --file environment.yml
+```
+
+With the above 3 line you first create the conda enviroment, then activate it
+and finally install all dependences.
+
 
 This workflow is also provided as a Docker and Singularity container for simplisity of execution. The Docker container is 4.58gb in size.
 
