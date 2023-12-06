@@ -1,0 +1,11 @@
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - ghostscript
+  - tesseract
+  - jq
+  - imagemagick
+  - r-base
+  - r-tidyverse
